@@ -4,6 +4,8 @@ class CreateNews < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
 
+      t.belongs_to :park, index: true
+
       t.timestamps
     end
   end

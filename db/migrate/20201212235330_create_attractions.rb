@@ -7,6 +7,8 @@ class CreateAttractions < ActiveRecord::Migration[6.0]
       t.text :description
       t.string :video_pesentation
 
+      t.belongs_to :park, index: true 
+
       t.timestamps
     end
   end
