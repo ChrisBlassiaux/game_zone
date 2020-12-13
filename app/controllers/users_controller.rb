@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-
-  def show
+  before_action :authenticate_user!
+  
+  def profil
     @user = User.find_by(id: params[:id])
   end
 end

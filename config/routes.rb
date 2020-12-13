@@ -9,14 +9,14 @@ Rails.application.routes.draw do
   get 'static_pages/my_game'
   get 'static_pages/contact'
 
+  get 'users/profil'
+  
   # pages dynamiques
   resources :parks, except: [:index, :create, :new]
   resources :news, except: :index
   resources :attractions
-
+  
   resources :items
-
-  resources :users, only: :show
 
   devise_for :users
 end
