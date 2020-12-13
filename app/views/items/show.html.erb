@@ -1,4 +1,34 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @item.text %>
+</p>
+
+<p>
+  <strong>Unit price ht:</strong>
+  <%= @item.unit_price_ht %>
+</p>
+
+<p>
+  <strong>Unit price tva:</strong>
+  <%= @item.unit_price_tva %>
+</p>
+
+<p>
+  <strong>Unit price ttc:</strong>
+  <%= @item.unit_price_ttc %>
+</p>
+
+<p>
+  <strong>Tva:</strong>
+  <%= @item.tva %>
+</p>
+
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>

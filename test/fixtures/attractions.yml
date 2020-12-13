@@ -5,11 +5,13 @@ one:
   experience_points: 1
   maximum_size: 1
   description: MyText
-  video_pesentation: MyString
+  video_presentation: MyString
+  park_id: 1
 
 two:
   name: MyString
   experience_points: 1
   maximum_size: 1
   description: MyText
-  video_pesentation: MyString
+  video_presentation: MyString
+  park_id: 1

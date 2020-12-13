@@ -14,6 +14,12 @@ class AttractionsTest < ApplicationSystemTestCase
     visit attractions_url
     click_on "New Attraction"
 
+    fill_in "Description", with: @attraction.description
+    fill_in "Experience points", with: @attraction.experience_points
+    fill_in "Maximum size", with: @attraction.maximum_size
+    fill_in "Name", with: @attraction.name
+    fill_in "Park", with: @attraction.park_id
+    fill_in "Video presentation", with: @attraction.video_presentation
     click_on "Create Attraction"
 
     assert_text "Attraction was successfully created"
@@ -24,6 +30,12 @@ class AttractionsTest < ApplicationSystemTestCase
     visit attractions_url
     click_on "Edit", match: :first
 
+    fill_in "Description", with: @attraction.description
+    fill_in "Experience points", with: @attraction.experience_points
+    fill_in "Maximum size", with: @attraction.maximum_size
+    fill_in "Name", with: @attraction.name
+    fill_in "Park", with: @attraction.park_id
+    fill_in "Video presentation", with: @attraction.video_presentation
     click_on "Update Attraction"
 
     assert_text "Attraction was successfully updated"

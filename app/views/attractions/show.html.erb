@@ -1,4 +1,34 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @attraction.name %>
+</p>
+
+<p>
+  <strong>Experience points:</strong>
+  <%= @attraction.experience_points %>
+</p>
+
+<p>
+  <strong>Maximum size:</strong>
+  <%= @attraction.maximum_size %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @attraction.description %>
+</p>
+
+<p>
+  <strong>Video presentation:</strong>
+  <%= @attraction.video_presentation %>
+</p>
+
+<p>
+  <strong>Park:</strong>
+  <%= @attraction.park_id %>
+</p>
+
 <%= link_to 'Edit', edit_attraction_path(@attraction) %> |
 <%= link_to 'Back', attractions_path %>

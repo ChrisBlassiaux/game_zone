@@ -2,8 +2,16 @@
 
 one:
   name: MyString
-  description: MyText
+  text: 
+  unit_price_ht: 9.99
+  unit_price_tva: 9.99
+  unit_price_ttc: 9.99
+  tva: 1
 
 two:
   name: MyString
-  description: MyText
+  text: 
+  unit_price_ht: 9.99
+  unit_price_tva: 9.99
+  unit_price_ttc: 9.99
+  tva: 1

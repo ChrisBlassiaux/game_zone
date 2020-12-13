@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_005536) do
+ActiveRecord::Schema.define(version: 2020_12_13_152335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_12_13_005536) do
     t.integer "experience_points"
     t.integer "maximum_size"
     t.text "description"
-    t.string "video_pesentation"
+    t.string "video_presentation"
     t.bigint "park_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_12_13_005536) do
   end
 
   create_table "news", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.text "description"
     t.bigint "park_id"
     t.datetime "created_at", precision: 6, null: false

@@ -14,6 +14,9 @@ class NewsTest < ApplicationSystemTestCase
     visit news_url
     click_on "New News"
 
+    fill_in "Description", with: @news.description
+    fill_in "Park", with: @news.park_id
+    fill_in "Title", with: @news.title
     click_on "Create News"
 
     assert_text "News was successfully created"
@@ -24,6 +27,9 @@ class NewsTest < ApplicationSystemTestCase
     visit news_url
     click_on "Edit", match: :first
 
+    fill_in "Description", with: @news.description
+    fill_in "Park", with: @news.park_id
+    fill_in "Title", with: @news.title
     click_on "Update News"
 
     assert_text "News was successfully updated"

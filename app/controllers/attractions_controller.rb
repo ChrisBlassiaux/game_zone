@@ -69,6 +69,6 @@ class AttractionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def attraction_params
-      params.fetch(:attraction, {})
+      params.require(:attraction).permit(:name, :experience_points, :maximum_size, :description, :video_presentation, :park_id)
     end
 end

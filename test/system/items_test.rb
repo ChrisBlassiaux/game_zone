@@ -14,6 +14,12 @@ class ItemsTest < ApplicationSystemTestCase
     visit items_url
     click_on "New Item"
 
+    fill_in "Name", with: @item.name
+    fill_in "Text", with: @item.text
+    fill_in "Tva", with: @item.tva
+    fill_in "Unit price ht", with: @item.unit_price_ht
+    fill_in "Unit price ttc", with: @item.unit_price_ttc
+    fill_in "Unit price tva", with: @item.unit_price_tva
     click_on "Create Item"
 
     assert_text "Item was successfully created"
@@ -24,6 +30,12 @@ class ItemsTest < ApplicationSystemTestCase
     visit items_url
     click_on "Edit", match: :first
 
+    fill_in "Name", with: @item.name
+    fill_in "Text", with: @item.text
+    fill_in "Tva", with: @item.tva
+    fill_in "Unit price ht", with: @item.unit_price_ht
+    fill_in "Unit price ttc", with: @item.unit_price_ttc
+    fill_in "Unit price tva", with: @item.unit_price_tva
     click_on "Update Item"
 
     assert_text "Item was successfully updated"
