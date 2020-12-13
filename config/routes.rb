@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   # pages dynamiques
-  resources :parks, except: [:index, :create]
+  resources :parks, except: [:index, :create, :new]
   resources :news, except: :index
   resources :attractions
 

@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h2>Le Park</h2>
+<h3>Horaires :</h3>
+<p>Ouverture : <%= @park.opening_times %></p>
+<p>Fermeture : <%= @park.closing_times %></p>
 
-<%= link_to 'Edit', edit_park_path(@park) %> |
-<%= link_to 'Back', parks_path %>
+<%= link_to 'Edit', edit_park_path(@park) %> 
+

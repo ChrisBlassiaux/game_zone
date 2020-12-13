@@ -13,9 +13,9 @@ class ParksController < ApplicationController
   end
 
   # GET /parks/new
-  def new
-    @park = Park.new
-  end
+  # def new
+  #   @park = Park.new
+  # end
 
   # GET /parks/1/edit
   def edit
@@ -69,6 +69,6 @@ class ParksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def park_params
-      params.fetch(:park, {})
+      params.fetch(:park).permit(:opening_times, :closing_times)
     end
 end

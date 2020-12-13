@@ -1,6 +1,11 @@
-<h1>Editing Park</h1>
 
-<%= render 'form', park: @park %>
+<%= form_for(@park) do |f| %>
 
-<%= link_to 'Show', @park %> |
-<%= link_to 'Back', parks_path %>
+  <%= f.label :opening_times %>:
+  <%= f.text_field :opening_times %><br />
+
+  <%= f.label :closing_times %>:
+  <%= f.text_field :closing_times %><br />
+
+  <%= f.submit %>
+<% end %>
