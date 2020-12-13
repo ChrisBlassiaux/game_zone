@@ -11,5 +11,6 @@ class UsersController < ApplicationController
     @news = News.all
     @items = Item.all
     @attractions = Attraction.all
+    @avatars = Avatar.all
   end
 end

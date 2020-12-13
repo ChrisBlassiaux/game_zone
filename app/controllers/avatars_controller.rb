@@ -1,16 +1,18 @@
 class AvatarsController < ApplicationController
   before_action :set_avatar, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :is_admin?
 
   # GET /avatars
   # GET /avatars.json
-  def index
-    @avatars = Avatar.all
-  end
+  # def index
+  #   @avatars = Avatar.all
+  # end
 
   # GET /avatars/1
   # GET /avatars/1.json
-  def show
-  end
+  # def show
+  # end
 
   # GET /avatars/new
   def new

@@ -68,3 +68,19 @@ end
     park_id: Park.all.first.id
   )
 end
+
+Avatar.create!(
+  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatars1.png"
+)
+
+Avatar.create!(
+  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatar2.png"
+)
+
+Avatar.create!(
+  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatars3.png"
+)
+
+Avatar.create!(
+  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatars4.png"
+)
