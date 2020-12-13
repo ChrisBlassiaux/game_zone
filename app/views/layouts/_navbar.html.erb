@@ -47,10 +47,23 @@
       <ul class="navbar-nav right">
         <% if current_user %>
 
-          <li class="nav-item">
-            <div class="nav-link"><%= link_to "Se déconnecter", session_path(session.id), method: :delete, class: "text-danger" %> </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.identifiant %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div class="nav-link"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, :class => "dropdown-item"  %></div>
+                <div class="dropdown-item"> 
+                  <% if current_user.is_admin %>
+                    <%# <div class="dropdown-item"><%= link_to "Dashboard Admin", admin_dashboard_index_path, class: "dropdown-item" %>
+                  <% end %>
+                  </div>
+                  <div class="dropdown-item"> 
+                    <%= link_to "Mon compte", user_path(current_user.id), class: "dropdown-item" %>
+                  </div>
+              </div>
+            </div> 
           </li>
-
         <% end %>
 
         <% if !current_user %>

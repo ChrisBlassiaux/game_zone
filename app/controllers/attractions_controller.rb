@@ -1,6 +1,8 @@
 class AttractionsController < ApplicationController
   before_action :set_attraction, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
+  before_action :is_admin?, only: [:edit, :update, :destroy]
+ 
   # GET /attractions
   # GET /attractions.json
   def index
@@ -10,7 +12,7 @@ class AttractionsController < ApplicationController
   # GET /attractions/1
   # GET /attractions/1.json
   def show
-  end
+  end 
 
   # GET /attractions/new
   def new
@@ -71,5 +73,11 @@ class AttractionsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def attraction_params
       params.require(:attraction).permit(:name, :experience_points, :maximum_size, :description, :video_presentation, :park_id)
+    end
+
+    def is_admin?
+      if current_user.is_admin === true
+        redirect_to '/'
+      end
     end
 end
