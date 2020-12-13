@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_12_13_005536) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "idenfiant"
+    t.string "identifiant"
     t.integer "xp", default: 0
     t.boolean "is_admin", default: false
     t.string "last_name"
