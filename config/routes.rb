@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :avatars
   resources :news
   # pages statiques
   root 'static_pages#home'
