@@ -25,6 +25,7 @@ class AttractionsController < ApplicationController
   # POST /attractions.json
   def create
     @attraction = Attraction.new(attraction_params)
+    @attraction.park_id = Park.all.first.id
 
     respond_to do |format|
       if @attraction.save

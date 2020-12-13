@@ -10,7 +10,6 @@
       <th>Maximum size</th>
       <th>Description</th>
       <th>Video presentation</th>
-      <th>Park</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +22,6 @@
         <td><%= attraction.maximum_size %></td>
         <td><%= attraction.description %></td>
         <td><%= attraction.video_presentation %></td>
-        <td><%= attraction.park_id %></td>
         <td><%= link_to 'Show', attraction %></td>
         <td><%= link_to 'Edit', edit_attraction_path(attraction) %></td>
         <td><%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
