@@ -3,9 +3,9 @@ class NewsController < ApplicationController
 
   # GET /news
   # GET /news.json
-  def index
-    @news = News.all
-  end
+  # def index
+  #   @news = News.all
+  # end
 
   # GET /news/1
   # GET /news/1.json
@@ -25,6 +25,7 @@ class NewsController < ApplicationController
   # POST /news.json
   def create
     @news = News.new(news_params)
+    @news.park_id = Park.all.first.id
 
     respond_to do |format|
       if @news.save

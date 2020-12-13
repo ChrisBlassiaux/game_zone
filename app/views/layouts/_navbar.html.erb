@@ -9,6 +9,11 @@
         <li class="nav-item">
           <div class="nav-link"><%= link_to "Le parc", park_path(Park.all.first) %> </div>
         </li>
+
+        <li class="nav-item">
+          <div class="nav-link"><%= link_to "Les attractions", attractions_path %> </div>
+        </li>
+
         <li class="nav-item">
           <div class="nav-link"><%= link_to "Plan du parc", static_pages_park_plan_path %></div>
         </li>
@@ -25,14 +30,19 @@
           <div class="nav-link"><%= link_to "Contact", static_pages_contact_path %></div>
         </li>
 
-        <li class="nav-item">
-          <div class="nav-link"><%= link_to "Mentions légales", static_pages_legal_notice_path %></div>
-        </li>
-
-        <li class="nav-item">
-          <div class="nav-link"><%= link_to "CGU-CGV", static_pages_cgu_cgv_path %></div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Footer
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-item"><%= link_to "Mentions légales", static_pages_legal_notice_path %></div>
+            <div class="dropdown-item"><%= link_to "CGU-CGV", static_pages_cgu_cgv_path %></div>
+          </div> 
         </li>
       </ul>
+
+      
+
       
       <ul class="navbar-nav right">
         <% if current_user %>
