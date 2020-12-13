@@ -40,9 +40,6 @@
           </div> 
         </li>
       </ul>
-
-      
-
       
       <ul class="navbar-nav right">
         <% if current_user %>
@@ -55,7 +52,7 @@
               <div class="nav-link"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, :class => "dropdown-item"  %></div>
                 <div class="dropdown-item"> 
                   <% if current_user.is_admin %>
-                    <%# <div class="dropdown-item"><%= link_to "Dashboard Admin", admin_dashboard_index_path, class: "dropdown-item" %>
+                    <div class="dropdown-item"><%= link_to "Dashboard Admin", users_dashboard_admin_path, class: "dropdown-item" %> </div>
                   <% end %>
                   </div>
                   <div class="dropdown-item"> 

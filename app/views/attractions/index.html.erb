@@ -23,13 +23,8 @@
         <td><%= attraction.description %></td>
         <td><%= attraction.video_presentation %></td>
         <td><%= link_to 'Show', attraction %></td>
-        <td><%= link_to 'Edit', edit_attraction_path(attraction) %></td>
-        <td><%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Attraction', new_attraction_path %>

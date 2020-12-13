@@ -10,12 +10,13 @@ Rails.application.routes.draw do
   get 'static_pages/contact'
 
   get 'users/profil'
+  get 'users/dashboard_admin'
   
   # pages dynamiques
   resources :parks, except: [:index, :create, :new]
   resources :news, except: :index
-  resources :attractions
   
+  resources :attractions
   resources :items
 
   devise_for :users
