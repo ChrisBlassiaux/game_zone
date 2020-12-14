@@ -1,0 +1,7 @@
+fr:
+  global: 
+    menu: 
+      park: "Le parc"
+  static_pages:
+    home:
+      welcome: "Bienvenue!"

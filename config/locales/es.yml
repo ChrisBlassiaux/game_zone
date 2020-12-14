@@ -1,0 +1,7 @@
+es:
+  global: 
+    menu: 
+      park: "El parque"
+  static_pages:
+    home:
+      welcome: "Bienvenido!"
