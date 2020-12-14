@@ -2,6 +2,17 @@ en:
   global: 
     menu: 
       park: "The park"
+      attractions: "Attractions"
+      plan: "Park Plan"
+      visite: "Prepare my visit"
+      game: "My game"
+      contact: "Contact"
+      log: 
+        logout: "Logout"
+        login: "Login"
+        signup: "Sign up"
+        profil: "My account"
+        admin: "DashBoard Admin"
   static_pages:
     home:
       welcome: "Welcome!"

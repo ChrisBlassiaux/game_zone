@@ -11,23 +11,23 @@
         </li>
 
         <li class="nav-item">
-          <div class="nav-link"><%= link_to "Les attractions", attractions_path %> </div>
+          <div class="nav-link"><%= link_to t('global.menu.attractions'), attractions_path %> </div>
         </li>
 
         <li class="nav-item">
-          <div class="nav-link"><%= link_to "Plan du parc", static_pages_park_plan_path %></div>
+          <div class="nav-link"><%= link_to t('global.menu.plan'), static_pages_park_plan_path %></div>
         </li>
         
         <li class="nav-item">
-          <div class="nav-link"><%= link_to "Préparer ma visite", static_pages_visit_preparation_path %></div>
+          <div class="nav-link"><%= link_to t('global.menu.visite'), static_pages_visit_preparation_path %></div>
         </li>
 
         <li class="nav-item">
-          <div class="nav-link"><%= link_to "My Game", static_pages_my_game_path %></div>
+          <div class="nav-link"><%= link_to t('global.menu.game'), static_pages_my_game_path %></div>
         </li>
 
         <li class="nav-item">
-          <div class="nav-link"><%= link_to "Contact", static_pages_contact_path %></div>
+          <div class="nav-link"><%= link_to t('global.menu.contact'), static_pages_contact_path %></div>
         </li>
 
         <li class="nav-item dropdown">
@@ -55,14 +55,14 @@
               <%= current_user.identifiant %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <div class="nav-link"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, :class => "dropdown-item"  %></div>
+              <div class="nav-link"><%= link_to t('global.menu.logout'), destroy_user_session_path, method: :delete, :class => "dropdown-item"  %></div>
                 <div class="dropdown-item"> 
                   <% if current_user.is_admin %>
-                    <div class="dropdown-item"><%= link_to "Dashboard Admin", users_dashboard_admin_path, class: "dropdown-item" %> </div>
+                    <div class="dropdown-item"><%= link_to t('global.menu.admin'), users_dashboard_admin_path, class: "dropdown-item" %> </div>
                   <% end %>
                   </div>
                   <div class="dropdown-item"> 
-                    <%= link_to "Mon compte", user_path(current_user.id), class: "dropdown-item" %>
+                    <%= link_to t('global.menu.profil'), user_path(current_user.id), class: "dropdown-item" %>
                   </div>
               </div>
             </div> 
@@ -76,8 +76,8 @@
               Se connecter / S'inscrire
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <div class="dropdown-item"><%= link_to "Se connecter", new_user_session_path %></div>
-              <div class="dropdown-item"> <%= link_to "S'inscrire", new_user_registration_path %> </div>
+              <div class="dropdown-item"><%= link_to t('global.menu.login'), new_user_session_path %></div>
+              <div class="dropdown-item"> <%= link_to t('global.menu.logout'), new_user_registration_path %> </div>
             </div> 
           </li>
 
