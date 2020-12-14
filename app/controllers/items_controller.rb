@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
 
     @item = Item.new(item_params)
     
+    @item.picture.attach(params[:picture])
     # puts "^" * 50
     # @item.picture.attach(io: File.open('app/assets/images/favicon.png'), filename: 'favicon.png', content_type: 'image/png')
     # puts @item.picture.attached?
@@ -43,7 +44,6 @@ class ItemsController < ApplicationController
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
-    @item.picture.attach(params[:picture])
   end
 
   # PATCH/PUT /items/1
