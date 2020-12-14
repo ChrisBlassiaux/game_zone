@@ -4,19 +4,15 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find_by(id: params[:id])
+    @avatars = Avatar.all
   end
 
   def edit
-    # @subject = Subject.friendly.find(params[:id])
-    # if current_user.id != @subject.user_id
-    #   redirect_to subject_path
-    # end
-    # @categories = Category.all
   end
 
   def update
     @user = User.find(current_user.id)
-    if @user.update(avatar_id: params[:user][:avatar_id])
+    if @user.update(avatar_id: params[:avatar_id])
       # flash[:success] = "Votre ressource a bien été modifiée !"
       redirect_to user_path(@user.id)
     else

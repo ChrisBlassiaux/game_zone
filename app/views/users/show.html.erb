@@ -4,7 +4,7 @@ Mon compte :
 <%= current_user.xp %>
 <div>
 <br> 
-  <%= current_user.avatar_id %>
+  avatar_id :<%= current_user.avatar_id %>
 </div>
 
 <div>
@@ -12,8 +12,11 @@ Mon compte :
 </div>
 
 <div>
-  afficher l'avatar 
-  Sur la page edit profil => ajouter l'option de modification d'avatar
+  <img src=<%= @avatars.find(current_user.avatar_id).url %> alt="" style="height: 100px">
+
+</div>
+
+<div>
 
   nombre d'xp
 </div>
@@ -22,8 +25,11 @@ Mon compte :
 <br>
 <%= form_for(@user) do |f| %>
 
-  <%= f.label :avatar_id %>:<br />
-  <%= f.text_field :avatar_id %><br />
+  <select name="avatar_id" id="avatar_id">
+    <% @avatars.each do |avatar| %>
+      <option value=<%= avatar.id %>><%= avatar.url %></option>
+    <% end %>
+  </select>
 
   <%= f.submit %>
 <% end %>
