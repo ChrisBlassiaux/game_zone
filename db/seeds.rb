@@ -13,6 +13,7 @@ Park.destroy_all
 Attraction.destroy_all
 News.destroy_all
 Item.destroy_all
+Avatar.destroy_all
 
 User.create!(
   email: "gamezoneadmin@yopmail.com",

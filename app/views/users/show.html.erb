@@ -1,0 +1,29 @@
+Mon compte :
+
+<%= current_user.identifiant %>
+<%= current_user.xp %>
+<div>
+<br> 
+  <%= current_user.avatar_id %>
+</div>
+
+<div>
+  <%= link_to 'Modifier mon compte', edit_user_registration_path %>
+</div>
+
+<div>
+  afficher l'avatar 
+  Sur la page edit profil => ajouter l'option de modification d'avatar
+
+  nombre d'xp
+</div>
+<br>
+<br>
+<br>
+<%= form_for(@user) do |f| %>
+
+  <%= f.label :avatar_id %>:<br />
+  <%= f.text_field :avatar_id %><br />
+
+  <%= f.submit %>
+<% end %>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'static_pages/my_game'
   get 'static_pages/contact'
 
-  get 'users/profil'
+  # get 'users/show'
   get 'users/dashboard_admin'
   
   # pages dynamiques
@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :items
 
   devise_for :users
+  resources :users, only: [:show, :edit, :update]
 end
