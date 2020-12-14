@@ -81,9 +81,9 @@ Avatar.create!(
 )
 
 Avatar.create!(
-  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatars3.png"
+  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatar3.png"
 )
 
 Avatar.create!(
-  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatars4.png"
+  url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatar4.png"
 )
