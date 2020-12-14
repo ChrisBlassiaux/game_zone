@@ -1,14 +1,18 @@
 class User < ApplicationRecord
-  # validates :nickname, uniqueness: true, presence: true, length: {maximum: 30}
-  # validates :password, presence: true,
-  #                      confirmation: true,
-  #                      length: {within: 6..40},
-  #                      on: :create
-  # validates :password, confirmation: true,
-  #                      length: {within: 6..40},
-  #                      allow_blank: true,
-  #                      on: :update
-  # validates :description, length: {maximum: 350}
+  validates :email, uniqueness: true, presence: true, length: {maximum: 30}
+  validates :password, presence: true,
+                       confirmation: true,
+                       length: {within: 6..40},
+                       on: :create
+  validates :password, confirmation: true,
+                       length: {within: 6..40},
+                       allow_blank: true,
+                       on: :update
+  validates :identifiant, presence: true
+  validates :xp, presence: true
+  validates :is_admin, presence: true
+  validates :first_name, length: {within: 2..40}
+  validates :last_name, length: {within: 2..40}
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
