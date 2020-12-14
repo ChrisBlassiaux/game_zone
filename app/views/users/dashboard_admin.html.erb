@@ -1,4 +1,20 @@
 Dashboard Admin
+
+<br><br>
+
+<h2>Accumuler l'xp des participants</h2>
+
+<%= form_tag("/users/add_participant", method: "post") do %>
+
+  <%= label_tag(:xp, "Quantité d'expérience") %>
+  <%= text_field_tag(:xp) %>
+
+  <%= label_tag(:identifiant, "Identifiant") %>
+  <%= text_field_tag(:identifiant) %>
+
+  <%= submit_tag("Envoyer les points") %>
+<% end %>
+
 <br><br>
 
 <h2>Park</h2>

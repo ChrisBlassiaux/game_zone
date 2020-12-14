@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :is_admin?, only: :dashboard_admin
+  before_action :is_admin?, only: [:dashboard_admin, :add_participant]
   
   def show
     @user = User.find_by(id: params[:id])
@@ -21,7 +21,6 @@ class UsersController < ApplicationController
     end  
   end
 
-
   def dashboard_admin
     @park = Park.all.first
     @news = News.all
@@ -29,4 +28,17 @@ class UsersController < ApplicationController
     @attractions = Attraction.all
     @avatars = Avatar.all
   end
+
+  def add_participant
+    @user = User.find_by(identifiant: params[:identifiant])
+    @user.update(xp: cumulate_xp(@user.xp, params[:xp]))
+  end
+
+  private 
+
+  def cumulate_xp(old_xp, xp_received)
+    old_xp += xp_received.to_i
+  end
 end
+
+

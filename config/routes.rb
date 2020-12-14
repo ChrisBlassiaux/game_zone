@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   # get 'users/show'
   get 'users/dashboard_admin'
+  post 'users/add_participant'
   
   # pages dynamiques
   resources :parks, except: [:index, :create, :new]
