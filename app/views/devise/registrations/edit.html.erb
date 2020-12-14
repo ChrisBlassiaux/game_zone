@@ -3,6 +3,17 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <br><br>
+  Choisis ton avatar :)
+
+  <select>
+    <option style="background-image:url(<%= Avatar.find(current_user.avartar_id).url %>);">male</option>
+    <option style="background-image:url(female.png);">female</option>
+    <option style="background-image:url(others.png);">others</option>
+  </select> 
+
+  <br><br>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>

@@ -22,6 +22,7 @@ User.create!(
   city: "Paris",
   identifiant: "GameZone",
   xp: 0,
+  avatar_id: Avatar.all.first.id,
   is_admin: true
 )
 
@@ -39,6 +40,7 @@ Park.create!(
     city: Faker::Address.city,
     identifiant: Faker::Name.first_name,
     xp: 0,
+    avatar_id: Avatar.all.first.id,
     is_admin: false
   )
 
