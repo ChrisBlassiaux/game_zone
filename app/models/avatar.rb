@@ -1,3 +1,4 @@
 class Avatar < ApplicationRecord
-  validates :url, presence: true, format: { with: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/ }
+  validates :url, format: { with: /(https?|ftp|ssh|mailto):\/\/[a-z0-9\/:%_+.,#?!@&=-]+/,
+    message: "This is not an URL!" }
 end
