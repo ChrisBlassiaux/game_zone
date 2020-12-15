@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'cards/show'
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
     resources :avatars
@@ -22,6 +23,10 @@ Rails.application.routes.draw do
     
     resources :attractions
     resources :items
+
+    resources :shops, only:[:index, :show]
+    resources :order_items
+    resource :cards, only:[:show]
 
     devise_for :users
     resources :users, only: [:show, :edit, :update]

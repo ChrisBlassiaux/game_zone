@@ -8,4 +8,5 @@ class Item < ApplicationRecord
   validates :tva, presence: true
 
   has_one_attached :picture
+  has_many :order_items
 end

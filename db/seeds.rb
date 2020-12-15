@@ -65,7 +65,7 @@ Park.create!(
 
   Item.create!(
     name: Faker::Lorem.sentence(word_count: 1),
-    description: "password",
+    description: Faker::Lorem.sentence(word_count: 5),
     unit_price_ht: 10.00,
     unit_price_tva: 11.00,
     unit_price_ttc: 12.00,

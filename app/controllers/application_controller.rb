@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
   
+  include ApplicationHelper
+  
   private 
 
   def is_admin?

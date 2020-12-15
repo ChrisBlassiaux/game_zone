@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_15_193447) do
+ActiveRecord::Schema.define(version: 2020_12_15_225957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,13 +56,6 @@ ActiveRecord::Schema.define(version: 2020_12_15_193447) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "carts", force: :cascade do |t|
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_carts_on_user_id"
-  end
-
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -86,16 +79,6 @@ ActiveRecord::Schema.define(version: 2020_12_15_193447) do
     t.index ["slug"], name: "index_items_on_slug", unique: true
   end
 
-  create_table "join_table_cart_items", force: :cascade do |t|
-    t.integer "quantity"
-    t.bigint "cart_id"
-    t.bigint "item_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["cart_id"], name: "index_join_table_cart_items_on_cart_id"
-    t.index ["item_id"], name: "index_join_table_cart_items_on_item_id"
-  end
-
   create_table "news", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -107,19 +90,21 @@ ActiveRecord::Schema.define(version: 2020_12_15_193447) do
     t.index ["slug"], name: "index_news_on_slug", unique: true
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "number_order"
-    t.integer "state"
-    t.string "delivery_mode"
-    t.string "delivery_address"
-    t.decimal "amount_ht", precision: 8, scale: 2
-    t.decimal "amount_ttc", precision: 8, scale: 2
-    t.bigint "user_id"
-    t.bigint "cart_id"
+  create_table "order_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.integer "item_id"
+    t.integer "order_id"
+    t.decimal "total"
+    t.decimal "unit_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["cart_id"], name: "index_orders_on_cart_id"
-    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.decimal "subtotal"
+    t.decimal "total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "parks", force: :cascade do |t|

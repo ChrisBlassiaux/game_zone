@@ -1,2 +1,0 @@
-class JoinTableCartItem < ApplicationRecord
-end

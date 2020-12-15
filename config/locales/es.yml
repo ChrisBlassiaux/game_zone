@@ -7,11 +7,13 @@ es:
       visite: "Prepara mi visita"
       game: "Mi juego"
       contact: "Contactar"
+      shop: "Tienda"
       logout: "Desconectarse"
       login: "Conectarse"
       signup: "Registro"
       profil: "Mi cuenta"
       admin: "DashBoard Admin"
+      cart: "Carro"
   static_pages:
     home:
       welcome: "Bienvenido!"
