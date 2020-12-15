@@ -28,6 +28,7 @@ class UsersController < ApplicationController
     @items = Item.all
     @attractions = Attraction.all
     @avatars = Avatar.all
+    @users = User.all
   end
 
   def add_participant
