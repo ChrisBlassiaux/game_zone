@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     post 'users/add_participant'
     
     # pages dynamiques
-    resources :parks, except: [:index, :create, :new]
+    resources :parks, except: [:index, :create, :new], path: 'gamezone'
     resources :news, except: :index
     
     resources :attractions
