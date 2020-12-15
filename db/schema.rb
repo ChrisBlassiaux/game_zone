@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_15_110539) do
+ActiveRecord::Schema.define(version: 2020_12_15_125709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,9 @@ ActiveRecord::Schema.define(version: 2020_12_15_110539) do
     t.bigint "park_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
     t.index ["park_id"], name: "index_attractions_on_park_id"
+    t.index ["slug"], name: "index_attractions_on_slug", unique: true
   end
 
   create_table "avatars", force: :cascade do |t|
@@ -84,7 +86,9 @@ ActiveRecord::Schema.define(version: 2020_12_15_110539) do
     t.bigint "park_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
     t.index ["park_id"], name: "index_news_on_park_id"
+    t.index ["slug"], name: "index_news_on_slug", unique: true
   end
 
   create_table "parks", force: :cascade do |t|
