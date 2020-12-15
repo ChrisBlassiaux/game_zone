@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :identifiant, use: :slugged
   
   validates :email, uniqueness: true, presence: true, length: {maximum: 30}
   validates :password, presence: true,

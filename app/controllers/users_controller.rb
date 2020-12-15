@@ -30,8 +30,12 @@ class UsersController < ApplicationController
   end
 
   def add_participant
-    @user = User.find_by(identifiant: params[:identifiant])
-    @user.update(xp: cumulate_xp(@user.xp, params[:xp]))
+    if @user = User.find_by(identifiant: params[:identifiant])
+      @user.update(xp: cumulate_xp(@user.xp, params[:xp]))
+    else
+      flash.now[:alert] = "Attention l'identifiant entré n'existe pas!"
+      redirect_to users_dashboard_admin_path
+    end
   end
 
   private 
