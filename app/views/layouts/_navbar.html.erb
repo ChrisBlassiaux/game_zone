@@ -53,6 +53,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= current_user.identifiant %>
+              <img src=<%= Avatar.find(current_user.avatar_id).url %> alt="" style="height: 30px">
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <div class="nav-link"><%= link_to t('global.menu.logout'), destroy_user_session_path, method: :delete, :class => "dropdown-item"  %></div>
