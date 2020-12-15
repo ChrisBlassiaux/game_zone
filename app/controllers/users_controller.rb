@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.friendly.find(params[:id])
   end
 
   def update

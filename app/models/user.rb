@@ -2,7 +2,7 @@ class User < ApplicationRecord
   extend FriendlyId
   friendly_id :identifiant, use: :slugged
   
-  validates :email, uniqueness: true, presence: true, length: {maximum: 30}
+  validates :email, uniqueness: true, presence: true
   validates :password, presence: true,
                        confirmation: true,
                        length: {within: 6..40},
@@ -13,7 +13,6 @@ class User < ApplicationRecord
                        on: :update
   validates :identifiant, presence: true
   validates :xp, presence: true
-  validates :is_admin, presence: true
   validates :first_name, length: {within: 2..40}
   validates :last_name, length: {within: 2..40}
 
