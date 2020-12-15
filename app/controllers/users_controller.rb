@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :is_admin?, only: [:dashboard_admin, :add_participant]
   
   def show
-    @user = User.find_by(id: params[:id])
+    @user = User.friendly.find_by(id: params[:id])
     @avatars = Avatar.all
   end
 
