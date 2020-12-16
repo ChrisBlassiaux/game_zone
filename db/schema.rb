@@ -108,8 +108,9 @@ ActiveRecord::Schema.define(version: 2020_12_15_225957) do
   end
 
   create_table "parks", force: :cascade do |t|
-    t.string "opening_times"
-    t.string "closing_times"
+    t.string "first_part_schedules"
+    t.string "second_part_schedules"
+    t.string "last_part_schedules"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

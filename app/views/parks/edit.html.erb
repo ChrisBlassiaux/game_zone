@@ -1,11 +1,14 @@
 
 <%= form_for(@park) do |f| %>
 
-  <%= f.label :opening_times %>:
-  <%= f.text_field :opening_times %><br />
+  <%= f.label :first_part_schedules %>:
+  <%= f.text_field :first_part_schedules %><br />
 
-  <%= f.label :closing_times %>:
-  <%= f.text_field :closing_times %><br />
+  <%= f.label :second_part_schedules %>:
+  <%= f.text_field :second_part_schedules %><br />
+
+  <%= f.label :last_part_schedules %>:
+  <%= f.text_field :last_part_schedules %><br />
 
   <%= f.submit %>
 <% end %>

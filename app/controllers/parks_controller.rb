@@ -71,6 +71,6 @@ class ParksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def park_params
-      params.fetch(:park).permit(:opening_times, :closing_times)
+      params.fetch(:park).permit(:first_part_schedules, :second_part_schedules, :last_part_schedules)
     end
 end

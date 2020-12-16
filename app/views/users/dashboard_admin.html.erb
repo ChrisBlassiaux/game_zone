@@ -22,16 +22,18 @@ Dashboard Admin
 <table>
   <thead>
     <tr>
-      <th>Heure d'ouverture</th>
-      <th>Heure de fermeture</th>
+      <th>Horaires de Lundi à Jeudi</th>
+      <th>Horaires de Vendredi à Samedi</th>
+      <th>Horaires du Dimanche</th>
       <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
       <tr>
-        <td><%= @park.opening_times %></td>
-        <td><%= @park.closing_times %></td>
+        <td><%= @park.first_part_schedules %></td>
+        <td><%= @park.second_part_schedules %></td>
+        <td><%= @park.last_part_schedules %></td>
         <td><%= link_to 'Modifier', edit_park_path(@park.id) %></td>
       </tr>
   </tbody>

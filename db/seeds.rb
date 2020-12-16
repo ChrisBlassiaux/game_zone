@@ -46,8 +46,9 @@ User.create!(
 )
 
 Park.create!(
-  opening_times: "9h00",
-  closing_times: "19h00"
+  first_part_schedules: "9h-19h",
+  second_part_schedules: "9h-20h",
+  last_part_schedules: "9h-18h"
 )
 
 10.times do
