@@ -86,10 +86,11 @@
             </div> 
           </li>
 
-          <% end %>
+        <% end %>
 
          <li class="nav-item dropdown">
-            <%# <%= link_to t('global.menu.cart'), cart_path() %>
+            <%= link_to t('global.menu.cart'), carts_path() %>
+            <%= current_order.order_items.size %>
         </li>
       </ul>
     </div>

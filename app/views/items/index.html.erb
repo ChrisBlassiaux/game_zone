@@ -16,14 +16,14 @@
       <tr>
         <td><%= item.name %></td>
         <td><%= item.unit_price_ht %></td>
-        <td><%= link_to 'Show', shop_path(item) %></td>
+        <td><%= link_to 'Show', item_path(item) %></td>
 
         <td>
         
           <%= form_for @order_item, remote: true  do |f|%>
             <%= f.hidden_field :item_id, :value => item.id %>
             <%= f.number_field :quantity, :value => 1, :min =>  1%>
-            <%= f.submit "Add to Card "%>
+            <%= f.submit "Add to Cart "%>
 
           <% end %>
         </td>
@@ -34,6 +34,6 @@
 </table>
 
 <br>
-<div id="card">
-  <%= render 'cards/card'%>
+<div id="cart">
+  <%= render 'carts/cart'%>
 </div>

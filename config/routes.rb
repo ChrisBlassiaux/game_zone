@@ -24,9 +24,8 @@ Rails.application.routes.draw do
     resources :attractions
     resources :items
 
-    resources :shops, only:[:index, :show]
     resources :order_items
-    resource :cards, only:[:show]
+    resource :carts, only:[:show]
 
     devise_for :users
     match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
