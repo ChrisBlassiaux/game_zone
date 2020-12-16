@@ -3,4 +3,6 @@ class Attraction < ApplicationRecord
   friendly_id :name, use: :slugged
 
   belongs_to :park
+
+  has_one_attached :picture
 end

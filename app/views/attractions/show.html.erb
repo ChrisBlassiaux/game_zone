@@ -25,4 +25,11 @@
   <%= @attraction.video_presentation %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <% if @attraction.picture.attached? %>
+    <%= image_tag(@attraction.picture, :style => "width: 100px") %>
+  <% end %>
+</p>
+
 <%= link_to 'Back', attractions_path %>

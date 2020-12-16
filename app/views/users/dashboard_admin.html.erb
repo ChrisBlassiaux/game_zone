@@ -52,6 +52,7 @@ Dashboard Admin
       <th>Maximum size</th>
       <th>Description</th>
       <th>Video presentation</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -64,6 +65,11 @@ Dashboard Admin
         <td><%= attraction.maximum_size %></td>
         <td><%= attraction.description %></td>
         <td><%= attraction.video_presentation %></td>
+        <td>
+          <% if attraction.picture.attached? %>
+            <%= image_tag(attraction.picture, :style => "width: 100px") %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', attraction %></td>
         <td><%= link_to 'Edit', edit_attraction_path(attraction) %></td>
         <td><%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -84,6 +90,7 @@ Dashboard Admin
     <tr>
       <th>titre</th>
       <th>Description</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -93,6 +100,11 @@ Dashboard Admin
       <tr>
         <td><%= news.title %></td>
         <td><%= news.description %></td>
+        <td>
+          <% if news.picture.attached? %>
+            <%= image_tag(news.picture, :style => "width: 100px") %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', news %></td>
         <td><%= link_to 'Edit', edit_news_path(news) %></td>
         <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -117,6 +129,7 @@ Dashboard Admin
       <th>Prix unitaire hors taxe</th>
       <th>Prix unitaire TTC</th>
       <th>TVA</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -129,6 +142,11 @@ Dashboard Admin
         <td><%= items.unit_price_ht %></td>
         <td><%= items.unit_price_ttc %></td>
         <td><%= items.tva %></td>
+        <td>
+          <% if items.picture.attached? %>
+            <%= image_tag(items.picture, :style => "width: 100px") %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', items %></td>
         <td><%= link_to 'Edit', edit_item_path(items) %></td>
         <td><%= link_to 'Destroy', items, method: :delete, data: { confirm: 'Are you sure?' } %></td>

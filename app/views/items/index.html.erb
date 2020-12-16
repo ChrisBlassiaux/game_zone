@@ -16,6 +16,11 @@
       <tr>
         <td><%= item.name %></td>
         <td><%= item.unit_price_ht %></td>
+        <td>
+          <% if item.picture.attached? %>
+            <%= image_tag(item.picture, :style => "width: 100px") %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', item_path(item) %></td>
 
         <td>

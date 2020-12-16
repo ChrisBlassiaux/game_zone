@@ -10,3 +10,11 @@
   <%= @news.description %>
 </p>
 
+
+<p>
+  <strong>Image:</strong>
+  <% if @news.picture.attached? %>
+    <%= image_tag(@news.picture, :style => "width: 100px") %>
+  <% end %>
+</p>
+

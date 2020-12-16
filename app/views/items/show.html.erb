@@ -26,14 +26,10 @@
 </p>
 
 <p>
-  <strong>Tva:</strong>
-  <%= image_tag(@item.picture) if @item.picture.attached? %>
-</p>
-
-
-<div>
   <strong>Image:</strong>
-  <%# <%= image_tag(@item.picture, style:"width: 50px") %>
-</div>
+  <% if @item.picture.attached? %>
+    <%= image_tag(@item.picture, :style => "width: 100px") %>
+  <% end %>
+</p>
 
 <%= link_to 'Back', items_path %>
