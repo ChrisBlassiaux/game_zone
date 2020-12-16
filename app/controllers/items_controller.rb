@@ -28,14 +28,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-
     @item = Item.new(item_params)
-    
-    @item.picture.attach(params[:picture])
-    # puts "^" * 50
-    # @item.picture.attach(io: File.open('app/assets/images/favicon.png'), filename: 'favicon.png', content_type: 'image/png')
-    # puts @item.picture.attached?
-    # puts "^" * 50
     
     respond_to do |format|
       if @item.save

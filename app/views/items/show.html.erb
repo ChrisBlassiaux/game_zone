@@ -25,6 +25,12 @@
   <%= @item.tva %>
 </p>
 
+<p>
+  <strong>Tva:</strong>
+  <%= image_tag(@item.picture) if @item.picture.attached? %>
+</p>
+
+
 <div>
   <strong>Image:</strong>
   <%# <%= image_tag(@item.picture, style:"width: 50px") %>
