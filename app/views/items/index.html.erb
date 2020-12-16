@@ -5,11 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Text</th>
-      <th>Unit price ht</th>
-      <th>Unit price ttc</th>
-      <th>Tva</th>
+      <th>Title</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,14 +15,25 @@
     <% @items.each do |item| %>
       <tr>
         <td><%= item.name %></td>
-        <td><%= item.description %></td>
         <td><%= item.unit_price_ht %></td>
-        <td><%= item.unit_price_ttc %></td>
-        <td><%= item.tva %></td>
-        <td><%= link_to 'Show', item %></td>
+        <td><%= link_to 'Show', shop_path(item) %></td>
+
+        <td>
+        
+          <%= form_for @order_item, remote: true  do |f|%>
+            <%= f.hidden_field :item_id, :value => item.id %>
+            <%= f.number_field :quantity, :value => 1, :min =>  1%>
+            <%= f.submit "Add to Card "%>
+
+          <% end %>
+        </td>
+       
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<div id="card">
+  <%= render 'cards/card'%>
+</div>
