@@ -13,11 +13,9 @@ class OrderItem < ApplicationRecord
       end
   end
 
-
   def total
       unit_price*quantity
   end
-
 
   private
 
