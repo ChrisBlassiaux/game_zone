@@ -22,6 +22,14 @@ class UsersController < ApplicationController
     end  
   end
 
+  def destroy
+    @user = User.find_by(slug: params[:id])
+
+    if @user.destroy
+        redirect_to users_dashboard_admin_path, notice: "User deleted."
+    end
+  end
+
   def dashboard_admin
     @park = Park.all.first
     @news = News.all

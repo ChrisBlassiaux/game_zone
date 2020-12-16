@@ -194,7 +194,7 @@ Dashboard Admin
         <td><%= user.last_name %></td>
         <td><%= user.first_name %></td>
         <td><%= user.city %></td>
-        <td><%= link_to 'Destroy', registration_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
