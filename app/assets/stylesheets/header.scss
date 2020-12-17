@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'commando';
+  src: url(/assets/commando) format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+header nav {
+  display: flex;
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  font-family: 'commando';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 13.41px;
+}
+
+header nav .link,
+.languages {
+  display: none;
+}
+
+header nav .logo {
+  display: initial;
+}
+
+.avatar {
+  height: 36px;
+  width: 53px;
+}
+
+.account-wrapper {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.account-wrapper > a {
+  margin: 0 10px;
+}
+
+.account-wrapper > a > .cart {
+  width: 18px;
+  height: 18px;
+}
+
+.personal-info div {
+  margin: 2px 0;
+}
+
+.hamburger img {
+  width: 24px;
+  height: 20px;
+
+}
+
+.content-mobile {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  float: none;
+  text-align: center;
+  background-color: black;
+  top: 100px;
+  right: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+li > a {
+  text-decoration: none;
+  font-family: 'commando';
+}
+
+li > a:hover {
+  color: #f6cd40;
+}
+
+.content-mobile > li {
+  margin: 20px;
+  list-style: none;
+}
+
+/* Nav mobile */
+
+@media screen and (min-width: 768px) {
+}
+
+/* Nav Desktop */
+@media screen and (min-width: 992px) {
+  .content-mobile {
+    display: none;
+  }
+}
+
+/* Nav Desktop */
+@media screen and (min-width: 1200px) {
+  .content-mobile {
+    display: none;
+  }
+  header nav .link,
+  .languages {
+    display: block;
+  }
+
+  header nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  header nav .link:hover {
+    color: #f6cd40;
+  }
+
+  header nav a:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  .menu-wrapper {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .menu-arrow {
+    width: 20px;
+    height: 9px;
+    display: inline-block;
+    background-image: image-url("arrow-down.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    left: -23%;
+    width: 190px;
+    background-color: black;
+    text-align: center;
+  }
+
+  .menu .menu-item:first-child {
+    padding: 24px 10px 14px 10px;
+  }
+
+  .menu .menu-item {
+    display: block;
+    padding: 14px 10px;
+  }
+
+  .menu-wrapper:hover .menu {
+    display: block;
+  }
+
+  .menu-wrapper:hover .menu-arrow {
+    background-image: image-url("arrow.png");
+  }
+
+  .languages {
+    display: block;
+  }
+
+  .languages a {
+    display: block;
+  }
+
+  .languages img {
+    height: 18px;
+    width: 18px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}

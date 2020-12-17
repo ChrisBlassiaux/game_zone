@@ -17,5 +17,8 @@ module GameZone
     # the framework and any gems in your application.
     config.i18n.available_locales = [:en, :es, :fr]
     config.i18n.default_locale = :fr
+
+    config.assets.enabled = true
+    config.assets.paths << Rails.root.join('/app/assets/fonts')
   end
 end

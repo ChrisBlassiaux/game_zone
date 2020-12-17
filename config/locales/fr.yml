@@ -4,6 +4,9 @@ fr:
       park: "Le parc"
       attractions: "Attractions"
       plan: "Plan du park"
+      calendar: "Horaires et Calendrier"
+      pricings: "Tarifs et billeterie"
+      go_to_the_park: "Se rendre au parc"
       visite: "Préparer ma visite"
       game: "My game"
       contact: "Contact"
@@ -13,7 +16,6 @@ fr:
       signup: "S'incrire"
       profil: "Mon compte"
       admin: "DashBoard Admin"
-      cart: "Panier"
   static_pages:
     home:
       welcome: "Bienvenue!"

@@ -12,7 +12,13 @@ class StaticPagesController < ApplicationController
   def park_plan
   end
 
-  def visit_preparation
+  def pricings
+  end
+
+  def go_to_the_park
+  end
+
+  def calendar
   end
 
   def my_game

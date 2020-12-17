@@ -4,6 +4,9 @@ es:
       park: "El parque"
       attractions: "Atracciones"
       plan: "Plano del parque"
+      calendar: "Horaires et Calendrier"
+      pricings: "Tarifs et billeterie"
+      go_to_the_park: "Se rendre au parc"
       visite: "Prepara mi visita"
       game: "Mi juego"
       contact: "Contactar"
@@ -13,7 +16,6 @@ es:
       signup: "Registro"
       profil: "Mi cuenta"
       admin: "DashBoard Admin"
-      cart: "Carro"
   static_pages:
     home:
       welcome: "Bienvenido!"

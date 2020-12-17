@@ -1,0 +1,50 @@
+
+
+ <footer>
+    <div class="content-footer">
+    <div class="column-right">
+      <h2 class="help">BESOIN D'AIDE ?</h2>
+      <div class=line></div>
+      <p class="help-content">Numéro spéciale:</p> 
+        <a href="tel:+33859620859">08 59 62 08 59</a>
+
+      <h2 class="contact container">NOUS CONTACTER</h2>
+      <div class=line></div>
+      <a class="contact-content" href="">Nous contacter <br> On recrute</a>
+    </div>
+    <div class="column-center">
+      <h2 class="hours">HORAIRES DU PARC</h2>
+      <div class=line></div>
+      <p class="hours-text">
+        Du lundi au jeudi: <%= Park.all.first.first_part_schedules %><br>
+        Du vendredi au samedi: <%= Park.all.first.second_part_schedules %><br>
+        Dimanche: <%= Park.all.first.last_part_schedules %>
+      </p>
+      <h2 class="network">SUIVRE GAME ZONE</h2>
+      <div class="line"></div>
+      <div class="logo">
+        <%= link_to carts_path do %>
+          <%= image_tag "instagram.png", class: 'logo-network' %>
+        <% end %>
+        <%= link_to carts_path do %>
+          <%= image_tag "twitter.png", class: 'logo-network' %>
+        <% end %>
+        <%= link_to carts_path do %>
+          <%= image_tag "facebook.png", class: 'logo-network' %>
+        <% end %>
+        <%= link_to carts_path do %>
+          <%= image_tag "youtube.png", class: 'logo-network' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="column-left">
+      <h2 class="about">A PROPOS</h2>
+      <div class="line-size"></div>
+      <a href="" class="about-content">A propos du parc</a>
+      <h2 class="informations infos-size">INFORMATIONS LEGALES</h2>
+      <div class=line></div>
+      <%= link_to "Mentions légales", static_pages_legal_notice_path, class: 'mentions-legales' %><br>
+      <%= link_to "Conditions générales de vente et d'utilisation", static_pages_cgu_cgv_path, class: 'cgu' %><br>
+    </div>
+  </div>
+  </footer>

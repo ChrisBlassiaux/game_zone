@@ -1,3 +1,107 @@
-<h2>Home page</h2>
+ <section>
+    <div class="header-background">
+      <h1>Commencez l'aventure <br>avec nous</h1>
+      <%= link_to static_pages_park_plan_path, :class => "btn" do %>
+        Decouvrez le plan du parc
+      <% end %>
+    </div>
+  </div>
+  </section>
+  <section>
+    <div class="container-parc">
+      <div class="logo-game-zone">
+        <%= image_tag "logo-border.png", class: 'logo-gz' %>
+      </div>
+      <div>
+        <h2 class="title-park">
+          Le parc
+        </h2>
+        <div class="game-zone-text">
+        <div class="line-extrem-left"></div>
+        <div class="line-left"></div>
+          <p>
+            GEEK CYBERCENTER est une SAS au capital de 45 824 123 euros. Il s’agit d’un groupe possédant plusieurs parcs d’attractions dans le monde comme : BATTLE KART VR, FORTNITE ADVENTURE, PUBG SURVIVOR. En septembre 2019, le groupe ouvrira un nouveau parc : GAME ZONE. Ce dernier sera le premier parc d’attraction au monde entièrement dédié à l’univers des jeux-vidéo.
+          </p>
+        </div>
+          <%= link_to static_pages_calendar_path, :class => "btn" do %>
+            Preparer votre visite
+          <% end %>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="banner">
+      <div class="row">
+        <div>
+          <p class="number"><span class="size"><%= Attraction.all.count %></span><br>
+          Attraction</p>
+        </div>
+        <div>
+          <p class="number"><span class="size">5</span><br>
+          Restaurants</p>
+        </div>
+        <div>
+          <p class="number"><span class="size">500K</span><br>
+          Visiteurs</p>
+        </div>
+        <div>
+          <p class="number"><span class="size">9000</span><br>
+          Hectares</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div>
+      <div class="picture-content">
+      <h2>NOS ATTRACTIONS PHARES</h2>
+      <p>
+        Allez à la découverte des <%= Attraction.all.count %> attractions dans notre parc !<br>
+        Il y en a pour les grands comme pour les petits
+      </p>
+    </div>
+  </section>
+  <section>
+    <div class="container-park-attraction">
+      <% count = 0 %>
+      <% Attraction.all.each do |attraction| %>
+        <% if count < 3 %>
+          <div class="
+            <% if count === 0 %>
+              content-attractions
+            <% elsif count === 1 %>
+              content-game-center
+            <% else %>
+              content-battle-kart
+            <% end %>
+          ">
+            <%= image_tag(attraction.picture) if attraction.picture.attached?  %>
+            <h3 class="title">
+              <span class="weight">GAIN XP : <%= attraction.experience_points %> / PARTIE</span><br>
+              INTERDIT AUX MOINS D'1M30
+            </h3>
+            <p class="text-content">
+              <%= attraction.description %>
+            </p>
+            <%= link_to attraction_path(attraction.id), :class => "btn" do %>
+              Decouvrir
+            <% end %>
+          </div>
+        <% end %>
+        <% count += 1 %>
+      <% end %>
+    </div>
+  </div>
+  </section>
+  <section>
+    <div class="card">
+      <div class="card-content">
 
-<h3><%= t '.welcome' %></h3>
+      </div>
+      <div class="card-content">
+        
+      </div>
+      <div class="card-content">
+        
+      </div>
+    </div>
+  </section>

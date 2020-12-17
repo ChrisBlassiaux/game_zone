@@ -1,0 +1,79 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  text-decoration: none;
+  font-family: "helvetica neue";
+}
+
+footer {
+  background: black;
+  color: white;
+}
+
+
+.content-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.informations,
+.about,
+.network,
+.hours,
+.contact,
+.help {
+  font-size: 12px;
+  margin: 0;
+}
+
+.line {
+  border: 1px solid white;
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.line-size {
+  border: 1px solid white;
+  width: 50px;
+}
+
+.column-right > a {
+  color: white;
+  font-size: 10px;
+}
+
+.help-content {
+  margin: 0;
+  font-size: 10px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.hours-text {
+  margin: 5px 0 8px 0;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 14px;
+}
+
+.logo-network {
+  width: 26px;
+  height: 26px;
+}
+
+.column-left > a {
+  color: white;
+  font-size: 10px;
+}
+
+.infos-size {
+  margin-top: 40px;
+}
