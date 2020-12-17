@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'commando';
-  src: url(/assets/commando) format("truetype");
+  src: url(asset-path('fonts/commando.ttf'));
 }
 
 html,
@@ -18,7 +18,7 @@ header nav {
   align-items: center;
   justify-content: space-between;
   padding: 30px;
-  font-family: 'commando';
+  font-family: 'commando', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;

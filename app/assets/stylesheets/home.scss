@@ -1,30 +1,30 @@
 @font-face {
   font-family: "commando";
-  src: url("../fonts/commando.ttf") format("truetype");
+  src: url(/assets/commando.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "josefin";
-  src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+  src: url(/assets/Josefin_Sans/JosefinSans-Regular.ttf) format("truetype");
 }
 
-@font-face {
-  font-family: 'josefin';
-  src : url('../fonts/Josefin_Sans/JosefinSans-Light.ttf') format("truetype");
-  font-weight: lighter;
-}
+// @font-face {
+//   font-family: 'josefin';
+//   src : url('../fonts/Josefin_Sans/JosefinSans-Light.ttf') format("truetype");
+//   font-weight: lighter;
+// }
 
-@font-face {
-  font-family: 'josefin';
-  src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
+// @font-face {
+//   font-family: 'josefin';
+//   src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
+//   font-weight: bold;
+// }
 
-@font-face {
-  font-family: 'josefin';
-  src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
-  font-weight: medium;
-}
+// @font-face {
+//   font-family: 'josefin';
+//   src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+//   font-weight: medium;
+// }
 
 html, body {
   margin: 0;
@@ -32,6 +32,14 @@ html, body {
   width: 100vw;
   height: 100vh;
   background: radial-gradient(#ffffff, #F2F2F2);
+}
+
+.mr-2 {
+  margin-right: 25px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header-background {
@@ -104,7 +112,7 @@ html, body {
 }
 
 .game-zone-text  p {
-  font-family: "josefin";
+  font-family: "josefin", sans-serif;
   line-height: 20px;
   font-weight: lighter;
 }
@@ -157,7 +165,7 @@ html, body {
 }
 
 .picture-content > p {
-  font-family: "josefin";
+  font-family: "josefin", sans-serif;
   line-height: 24px;
   margin: 0;
   text-align: center;
@@ -189,7 +197,7 @@ html, body {
 
 .title {
   margin-top: 50px;
-  font-family: "josefin";
+  font-family: "josefin", sans-serif;
   font-weight: lighter;
   color: #D2D2D2;
   line-height: 24px;
@@ -197,7 +205,7 @@ html, body {
 
 .title-game {
   margin-top: 50px;
-  font-family: "josefin";
+  font-family: "josefin", sans-serif;
   font-weight: lighter;
   color: #D2D2D2;
   line-height: 24px;
@@ -213,7 +221,7 @@ html, body {
 
 .text-content {
   color: #D2D2D2;
-  font-family: "josefin";
+  font-family: "josefin", sans-serif;
   font-weight: lighter;
   line-height: 24px;
 }
@@ -354,14 +362,20 @@ html, body {
 
   .content-attractions {
     padding: 40px;
+
+    width: 100%;
   }
 
   .content-game-center {
     padding: 40px;
+
+    width: 100%;
   }
 
   .content-battle-kart {
     padding: 40px;
+
+    width: 100%;
   }
 
   .content-attractions > img {
