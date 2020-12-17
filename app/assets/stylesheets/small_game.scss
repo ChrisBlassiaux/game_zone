@@ -1,27 +1,28 @@
 @font-face {
   font-family: "Commando";
-  src: url("/fonts/commando.ttf") format("truetype");
+  src: url(/assets/commando.ttf) format("truetype");
 }
 
-@font-face {
-  font-family: "Pixeled";
-  src: url("/fonts/Pixeled.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: "Pixeled";
+//   src: url("/fonts/Pixeled.ttf") format("truetype");
+// }
 
-@font-face {
-  font-family: "Pixels";
-  src: url("/fonts/Pixels.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: "Pixels";
+//   src: url("/fonts/Pixels.ttf") format("truetype");
+// }
 
 .container-game {
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.rules-title {
+  font-family: 'commando';
 }
 
 .game-rules {
@@ -32,18 +33,6 @@
   margin: 0 auto;
   padding: 10px;
   box-sizing: border-box;
-}
-
-.rules-title {
-  font-family: "Pixeled";
-  font-size: 8px;
-  color: black;
-}
-
-.rules-text {
-  font-family: "Pixeled";
-  font-size: 6px;
-  color: black;
 }
 
 .red-text {
@@ -144,7 +133,7 @@
 }
 
 .neutral-box {
-  background-image: url(images/neutral-box.png);
+  background-image: image-url("/assets/small_game/neutral-box.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 50px;
@@ -156,7 +145,7 @@
 }
 
 .happy-box {
-  background-image: url(images/happy-box.png);
+  background-image: image-url("/assets/small_game/happy-box.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 50px;
@@ -168,7 +157,7 @@
 }
 
 .sad-box {
-  background-image: url(images/sad-box.png);
+  background-image: image-url("/assets/small_game/sad-box.png");
   background-repeat: no-repeat;
   background-size: contain;
   height: 50px;
@@ -238,19 +227,19 @@
 }
 
 .platin-medal {
-  background-image: url(images/platin-medal.png);
+  background-image: image-url("/assets/small_game/platin-medal.png");
 }
 
 .gold-medal {
-  background-image: url(images/gold-medal.png);
+  background-image: image-url("/assets/small_game/gold-medal.png");
 }
 
 .silver-medal {
-  background-image: url(images/silver-medal.png);
+  background-image: image-url("/assets/small_game/silver-medal.png");
 }
 
 .bronze-medal {
-  background-image: url(images/bronze-medal.png);
+  background-image: image-url("/assets/small_game/bronze-medal.png");
 }
 
 #success-failure-container {
@@ -261,11 +250,11 @@
 }
 
 .success {
-  background-image: url(images/check.png);
+  background-image: image-url("/assets/small_game/check.png");
 }
 
 .failure {
-  background-image: url(images/false.png);
+  background-image: image-url("/assets/small_game/false.png");
 }
 
 #game-over {

@@ -16,18 +16,24 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+// NAVBAR
 
-let hamButton = document.querySelector(".hamburger")
-let contentMobileShow = document.querySelector(".content-mobile");
+window.onload = function () {
 
-hamButton.addEventListener("click", () => {
-  alert('salut');
-  // if (contentMobileShow.style.display === "none" || contentMobileShow.style.display === "") {
-  //   contentMobileShow.style.display = "block";
-  // } else {
-  //   contentMobileShow.style.display = "none";
-  // }
-});
+  let hamButton = document.querySelector(".hamburger")
+  let contentMobileShow = document.querySelector(".content-mobile");
+  
+  hamButton.addEventListener("click", () => {
+  
+    if (contentMobileShow.style.display === "none" || contentMobileShow.style.display === "") {
+      contentMobileShow.style.display = "block";
+    } else {
+      contentMobileShow.style.display = "none";
+    }
+  });
+}
 
 
-//
+
+
+// GAME

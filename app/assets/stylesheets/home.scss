@@ -3,10 +3,10 @@
   src: url(/assets/commando.ttf) format("truetype");
 }
 
-@font-face {
-  font-family: "josefin";
-  src: url(/assets/Josefin_Sans/JosefinSans-Regular.ttf) format("truetype");
-}
+// @font-face {
+//   font-family: "josefin";
+//   src: url(/assets/Josefin_Sans/JosefinSans-Regular.ttf) format("truetype");
+// }
 
 // @font-face {
 //   font-family: 'josefin';
@@ -32,6 +32,8 @@ html, body {
   width: 100vw;
   height: 100vh;
   background: radial-gradient(#ffffff, #F2F2F2);
+
+  font-family: sans-serif;
 }
 
 .mr-2 {
