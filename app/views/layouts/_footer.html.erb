@@ -10,7 +10,8 @@
 
       <h2 class="contact container">NOUS CONTACTER</h2>
       <div class=line></div>
-      <a class="contact-content" href="">Nous contacter <br> On recrute</a>
+      <%= link_to "Nous contacter", static_pages_contact_path, class: 'contact-content' %><br>
+      <%= link_to "On recrute", '/', class: 'contact-content' %>
     </div>
     <div class="column-center">
       <h2 class="hours">HORAIRES DU PARC</h2>
@@ -40,7 +41,7 @@
     <div class="column-left">
       <h2 class="about">A PROPOS</h2>
       <div class="line-size"></div>
-      <a href="" class="about-content">A propos du parc</a>
+      <%= link_to "A propos du parc", park_path(Park.all.first), class: 'contact-content' %>
       <h2 class="informations infos-size">INFORMATIONS LEGALES</h2>
       <div class=line></div>
       <%= link_to "Mentions légales", static_pages_legal_notice_path, class: 'mentions-legales' %><br>

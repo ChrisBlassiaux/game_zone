@@ -1,1 +1,51 @@
-<h2>Mini jeu</h2>
+<div class="container-game">
+   <div class="game-rules">
+      <h2 class="rules-title">Régle du jeu</h2>
+      <p class="rules-text">
+        Trouvez simplement le nom du jeu et appuyer sur le bouton A. Pour
+        passer, appuyez sur le bouton B. Trouvez le maximum de jeu pour marquer
+        le plus de points possible avant la fin du temps imparti. Attention,
+        vous devez être précis dans le choix des noms.
+        <span class="red-text"
+          >Exemple: Mario Bros est différent de Super Mario Bros</span
+        >
+      </p>
+    </div>
+    <div class="game-wrapper">
+
+      <%= image_tag "small_game/gamezone-logo.png", id: 'gamezone-logo', alt: 'logo de gamezone' %>
+
+      <div id="game-container" style="display: none">
+        <div id="medal-container"></div>
+        <div id="level-number" style="display: none"></div>
+        <div id="box-character-container" class="neutral-box"></div>
+
+        <%= image_tag "small_game/skipped-police.png", id: 'skipped-message', class: 'logo-network', alt: 'skipped-message', style: 'display: none' %>
+   
+        <img id="picture" src="" alt="photo de jeu" />
+        <div id="chrono"></div>
+        <div id="experience-counter"></div>
+        <div class="user-input">
+          <input id="game-name" type="text" />
+          <div id="success-failure-container"></div>
+        </div>
+      </div>
+      <div id="game-over" style="display: none">
+        <h2>Score</h2>
+        <div class="score-container">
+          <p id="reward-text"></p>
+
+          <div class="final-score">
+            <div id="medal-game"></div>
+            <div id="score-game"></div>
+          </div>
+          <button id="continue" class="btn">Continue ?</button>
+        </div>
+      </div>
+      <%= image_tag "small_game/game_play.png", id: 'console-background' %>
+      <button id="start-button" class="btn">Commencer</button>
+
+      <%= image_tag "small_game/a-button.png", id: 'confirm-button', class: 'btn-game', alt: 'bouton A' %>
+      <%= image_tag "small_game/b-button.png", id: 'skip-button', class: 'btn-game', alt: 'bouton B' %>
+    </div>
+</div>
