@@ -3,13 +3,17 @@
   src: url(/assets/commando.ttf) format("truetype");
 }
 
+.identifiant {
+  margin: 10px 0;
+}
+
 header nav {
   display: flex;
   background-color: black;
   color: white;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
+  padding: 15px 30px;
   font-family: 'commando', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -26,9 +30,16 @@ header nav .logo {
   display: initial;
 }
 
-.avatar {
-  height: 36px;
-  width: 53px;
+.medail {
+  position: relative;
+  width: 45px;
+}
+
+.nav-avatar {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  width: 40px;
 }
 
 .account-wrapper {

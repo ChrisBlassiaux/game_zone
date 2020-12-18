@@ -33,15 +33,24 @@
     <% if current_user %>
     <div class="link menu-wrapper mr-2">
       <span>
-        <img src=<%= Avatar.find(current_user.avatar_id).url %> alt="Avatar de l'utilisateur" style="height: 30px" class="avatar">
-        <div><%= current_user.identifiant %></div>
+        <% if current_user.xp < 500 %>
+          <%= image_tag "medails/bronze.png", class: 'medail' %>
+        <% elsif current_user.xp >= 500 && current_user.xp < 1000 %>
+          <%= image_tag "medails/argent.png", class: 'medail' %>
+        <% elsif current_user.xp >= 1000 && current_user.xp < 2500 %>
+          <%= image_tag "medails/or.png", class: 'medail' %>
+        <% else %>
+          <%= image_tag "medails/platine.png", class: 'medail' %>
+        <% end %>
+        <img src=<%= Avatar.find(current_user.avatar_id).url %> alt="Avatar de l'utilisateur" class="nav-avatar">
+        <div class="identifiant"><%= current_user.identifiant %></div>
         <div><%= current_user.xp %></div>
         <i class="menu-arrow"></i>
       </span>
       <div class="menu">
-        <%= link_to t('global.menu.logout'), destroy_user_session_path, method: :delete, :class => "menu-item link"  %>
         <%= link_to t('global.menu.admin'), users_dashboard_admin_path, :class => "menu-item link"  %>
         <%= link_to t('global.menu.profil'), user_path(current_user), :class => "menu-item link"  %>
+        <%= link_to t('global.menu.logout'), destroy_user_session_path, method: :delete, :class => "menu-item link"  %>
       </div>
     </div>
     <% end %>
