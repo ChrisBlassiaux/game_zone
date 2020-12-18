@@ -29,6 +29,7 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new(attraction_params)
     @attraction.park_id = Park.all.first.id
 
+
     respond_to do |format|
       if @attraction.save
         format.html { redirect_to @attraction, notice: 'Attraction was successfully created.' }
@@ -72,6 +73,6 @@ class AttractionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def attraction_params
-      params.require(:attraction).permit(:name, :experience_points, :maximum_size, :description, :video_presentation, :park_id, :picture)
+      params.require(:attraction).permit(:name, :experience_points, :maximum_size, :description, :video_presentation, :park_id, pictures: [])
     end
 end

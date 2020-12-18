@@ -1,3 +1,29 @@
+<div class="page-header">
+      <h1>nous vous offrons les meilleures attractions</h1>
+      <button class="btn">Preparer ma visite</button>
+    </div>
+    <div class="widget-container">
+      <% @attractions.each do |attraction| %>
+        <div class="widget">
+          <div class="widget-content">
+            <% if attraction.pictures.attached? %>
+              <%= image_tag(attraction.pictures[0], :class => "widget-header", :style => 'width: 100px; margin-top: 20px') %>
+            <% end %>
+            <h3><%= attraction.name %></h3>
+            <h5>Gain XP : <%= attraction.experience_points %> XP / partie</h5>
+            <div><span class="subtitle">INTERDIT AUX MOINS D'1M10</span></div>
+            <%= link_to attraction_path(attraction.id), :class => "btn" do %>
+              voir l’attraction
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+<!-- 
+
+
 <p id="notice"><%= notice %></p>
 
 <h1>Attractions</h1>
@@ -24,8 +50,9 @@
         <td><%= attraction.description %></td>
         <td><%= attraction.video_presentation %></td>
         <td>
-          <% if attraction.picture.attached? %>
-            <%= image_tag(attraction.picture, :style => "width: 100px") %>
+          <% if attraction.pictures.attached? %>
+            <%= image_tag(attraction.pictures[0], :style => "width: 100px") %>
+            <%= image_tag(attraction.pictures[1], :style => "width: 100px") %>
           <% end %>
         </td>
         <td><%= link_to 'Show', attraction %></td>
@@ -33,4 +60,4 @@
     <% end %>
   </tbody>
 </table>
-
+-->

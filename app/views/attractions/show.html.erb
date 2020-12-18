@@ -27,8 +27,8 @@
 
 <p>
   <strong>Image:</strong>
-  <% if @attraction.picture.attached? %>
-    <%= image_tag(@attraction.picture, :style => "width: 100px") %>
+  <% if @attraction.pictures.attached? %>
+    <%= image_tag(@attraction.pictures[1], :style => "width: 100px") %>
   <% end %>
 </p>
 

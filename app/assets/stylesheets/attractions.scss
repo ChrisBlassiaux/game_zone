@@ -1,0 +1,168 @@
+// @font-face {
+//   font-family: "commando";
+//   src: url("../fonts/commando.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: "josefin";
+//   src: url("../fonts/Josefin_Sans/JosefinSans-Regular.ttf") format("truetype");
+// }
+
+// @font-face {
+//   font-family: 'josefin';
+//   src : url('../fonts/Josefin_Sans/JosefinSans-Light.ttf') format("truetype");
+//   font-weight: lighter;
+// }
+
+// @font-face {
+//   font-family: 'josefin';
+//   src: url("../fonts/Josefin_Sans/JosefinSans-Bold.ttf") format("truetype");
+//   font-weight: bold;
+// }
+
+// @font-face {
+//   font-family: 'josefin';
+//   src: url("../fonts/Josefin_Sans/JosefinSans-SemiBold.ttf") format("truetype");
+//   font-weight: medium;
+// }
+
+.page-header {
+  background-image: image-url("attractions-page-header.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header h1 {
+  color: #f6cd40;
+  text-align: center;
+  width: 70%;
+  margin: 0;
+  line-height: 38px;
+  font-size: 24px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.widget-container {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.widget {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+  height: 300px;
+}
+
+.widget-header {
+  width: 100%;
+}
+
+.widget-content {
+  background-color: #15172d;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 900px;
+}
+
+.widget-content h3 {
+  color: #f6cd40;
+  font-family: "commando";
+  margin-bottom: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.widget-content h5 {
+  color: #c9116a;
+  margin-bottom: 0;
+  font-size: 15px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-family: "commando";
+}
+
+.widget-content div {
+  color: white;
+  margin-top: 5px;
+}
+
+.subtitle {
+  font-family:"josefin", sans-serif;
+  font-weight: lighter;
+}
+
+.widget-content .btn {
+  margin-top: 40px;
+}
+
+/* Nav Desktop */
+@media screen and (min-width: 992px) {
+  .widget-content h3 {
+    font-size: 25px;
+  }
+  
+  .widget-content h5 {
+    font-size: 18px;
+  }
+}
+
+/* Nav Desktop */
+@media screen and (min-width: 1200px) {
+  .page-header h1 {
+    width: 30%;
+    font-size: 30px;
+  }
+
+  .widget-container {
+    padding: 40px;
+  }
+
+  .widget-content h3 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .widget-content h5 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .widget {
+    width: 48%;
+    margin: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}

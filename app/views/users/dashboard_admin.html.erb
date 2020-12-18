@@ -66,8 +66,8 @@ Dashboard Admin
         <td><%= attraction.description %></td>
         <td><%= attraction.video_presentation %></td>
         <td>
-          <% if attraction.picture.attached? %>
-            <%= image_tag(attraction.picture, :style => "width: 100px") %>
+          <% if attraction.pictures.attached? %>
+            <%= image_tag(attraction.pictures, :style => "width: 100px") %>
           <% end %>
         </td>
         <td><%= link_to 'Show', attraction %></td>
