@@ -22,7 +22,7 @@ Mon compte :
 <br>
 <br>
 <br>
-<%= form_for(@user) do |f| %>
+<%= form_for(current_user) do |f| %>
 
   <select name="avatar_id" id="avatar_id">
     <% @avatars.each do |avatar| %>

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'cards/show'
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-
+  
     resources :avatars
     resources :news
     # pages statiques
@@ -16,12 +15,14 @@ Rails.application.routes.draw do
     get 'static_pages/pricings'
     get 'static_pages/calendar'
     
+    get 'cards/show'
+
     # get 'users/show'
     get 'users/dashboard_admin'
     post 'users/add_participant'
     
     # pages dynamiques
-    resources :parks, except: [:index, :create, :new], path: 'gamezone'
+    resources :parks, except: [:index, :show, :create, :new], path: 'gamezone'
     resources :news, except: :index
     
     resources :attractions

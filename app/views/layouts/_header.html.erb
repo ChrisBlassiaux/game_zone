@@ -5,7 +5,6 @@
       <%= image_tag "logo-gamezone.png" %>
     <% end %>
 
-    <%= link_to t('global.menu.park'), park_path(Park.all.first), class: 'link' %>
     <%= link_to t('global.menu.attractions'), attractions_path, class: 'link' %>
     <%= link_to t('global.menu.plan'), static_pages_park_plan_path, class: 'link' %>
     <div class="link menu-wrapper">
@@ -24,7 +23,6 @@
     <%= link_to t('global.menu.contact'), static_pages_contact_path, class: 'link' %>
     
     <div class="account-wrapper mr-2">
-
       <div class="mr-2">
         <%= link_to carts_path do %>
           <%= image_tag "cart.png", class: 'cart' %>
@@ -42,6 +40,8 @@
       </span>
       <div class="menu">
         <%= link_to t('global.menu.logout'), destroy_user_session_path, method: :delete, :class => "menu-item link"  %>
+        <%= link_to t('global.menu.admin'), users_dashboard_admin_path, :class => "menu-item link"  %>
+        <%= link_to t('global.menu.profil'), user_path(current_user), :class => "menu-item link"  %>
       </div>
     </div>
     <% end %>
@@ -75,9 +75,6 @@
 
     <!-- nav mobile -->
     <div class="content-mobile">
-      <li>
-        <%= link_to t('global.menu.park'), park_path(Park.all.first), class: 'link-mobile' %><br>
-      </li>
       <li>
        <%= link_to t('global.menu.attractions'), attractions_path, class: 'link-mobile' %><br>
       </li>
