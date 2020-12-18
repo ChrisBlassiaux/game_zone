@@ -1,0 +1,141 @@
+.container-background-attraction {
+  position: relative;
+  z-index: 0;
+}
+
+.background-attraction {
+  width: 100%;
+}
+
+.icon-attraction {
+  position: absolute;
+  width: 100px;
+  top: 70px;
+  left: 50%;
+  right: 50%;
+  z-index: 0;
+}
+
+.container-background {
+  background-color: #15172D;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "commando";
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.content-description {
+  padding: 40px 40px 0px 40px;
+}
+
+.title-game-center {
+  font-family: "commando";
+  color: #f1c01c;
+  letter-spacing: 1px;
+}
+
+.experience > span {
+  font-family: "commando";
+  color: #B91466;
+  letter-spacing: 1px;
+}
+
+.experience {
+  font-family: "josefin";
+  font-weight: lighter;
+  font-size: 15px;
+  color: #d2d2d2
+}
+
+.content-text {
+  font-family: "josefin";
+  font-weight: lighter;
+  color: #d2d2d2
+}
+
+.container-picture {
+  text-align: right;
+}
+
+.container-picture > img {
+  width: 50%;
+}
+
+@media screen and (min-width: 768px){
+  .content-description {
+    padding: 80px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .containe-game {
+    display: flex;
+    padding: 80px 50px 50px 80px;
+    justify-content: space-around;
+  }
+
+  .content-description {
+    max-width: 700px;
+  }
+
+  .content-description {
+    padding: 0px;
+    margin-top: 45px;
+  }
+
+  .title-game-center {
+    font-size: 25px;
+  }
+
+  .experience {
+    font-size: 18px;
+  }
+
+  .container-picture {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .container-picture > img {
+    width: 92%;
+    margin-left: 30px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title-game-center {
+    margin-top: 60px;
+    font-size: 30px;
+  }
+  
+  .experience {
+    font-size: 20px;
+  }
+  
+  .content-text {
+    width: 80%;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}

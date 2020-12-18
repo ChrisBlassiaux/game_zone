@@ -74,13 +74,13 @@
               content-battle-kart
             <% end %>
           ">
-            <%= image_tag(attraction.pictures) if attraction.pictures.attached?  %>
+            <%= image_tag(attraction.pictures[0]) if attraction.pictures.attached?  %>
             <h3 class="title">
               <span class="weight">GAIN XP : <%= attraction.experience_points %> / PARTIE</span><br>
               INTERDIT AUX MOINS D'1M30
             </h3>
             <p class="text-content">
-              <%= attraction.description %>
+              <%= truncate(attraction.description, length: 160) %>
             </p>
             <%= link_to attraction_path(attraction.id), :class => "btn" do %>
               Decouvrir

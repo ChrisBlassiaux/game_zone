@@ -1,4 +1,35 @@
-<p id="notice"><%= notice %></p>
+
+<section>
+  <div class="container-background">
+    <div class="container-background-attraction">
+      <%= image_tag "background-survivor.png", class: 'background-attraction' %>
+      <%= image_tag(@attraction.pictures[0], class: 'icon-attraction') %>
+    </div>
+    <div class="containe-game">
+      <div class="content-description">
+        <h1 class="title-game-center"><%= @attraction.name %></h1>
+        <h2 class="experience"><span>Gain XP : <%= @attraction.experience_points %> XP / partie</span><br> 
+          <%= @attraction.maximum_size %></h2>
+          <p class="content-text">
+            <%= @attraction.description %>
+          </p>
+          <%= link_to static_pages_go_to_the_park_path, :class => "btn" do %>
+            Preparer votre visite
+          <% end %>
+      </div>
+      <div class="container-picture">
+        <%= image_tag(@attraction.pictures[0]) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 
+
+
+  <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Name:</strong>
@@ -33,3 +64,4 @@
 </p>
 
 <%= link_to 'Back', attractions_path %>
+-->
