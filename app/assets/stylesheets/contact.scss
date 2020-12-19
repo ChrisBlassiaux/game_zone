@@ -1,0 +1,224 @@
+
+
+.infos-contact-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.infos-content {
+  background-color: #323868;
+  padding: 40px;
+}
+
+.infos-content > h1 {
+  color: #F6CD40;
+  border-bottom: 1px solid white;
+  width: 55px;
+  font-family: "commando";
+  margin: 20px;
+}
+
+.infos-content > h2 {
+  color: #d2d2d2;
+  font-family: "josefin";
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.infos-content > p {
+  color: #d2d2d2;
+  font-family: "josefin-light";
+  font-size: 14px;
+  line-height: 22px;
+  margin-left: 20px;
+}
+
+.adress-game {
+  background-color: #1C1F3D;
+  padding: 20px;
+  width: 300px;
+}
+
+.adress-game > h3 {
+  color: #F6CD40;
+  font-family: "josefin";
+  font-size: 18px;
+}
+
+.adress-game > p {
+  color: #d2d2d2;
+  font-family: "josefin-light";
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.contact-content {
+  margin: 60px;
+}
+
+.contact-content > h2 {
+  color: #881F6A;
+  border-bottom: 1px solid black;
+  width: 90px;
+  font-family: "commando";
+  margin-bottom: 25px;
+}
+
+.message-content,
+.email-content,
+.lastname-content,
+.firstname-content {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 20px 0px;
+}
+
+.message-content > textarea,
+.email-content > input,
+.lastname-content > input,
+.firstname-content > input {
+  border-radius: 5px;
+  border: 0.5px solid grey;
+  width: 300px;
+  height: 20px;
+}
+
+.message-content > label,
+.email-content > label,
+.lastname-content > label,
+.firstname-content > label {
+  font-family: "josefin-light";
+  margin-bottom: 5px;
+}
+
+.checkbox-content > label {
+  font-family: "josefin-light";
+  font-size: 10px;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "commando";
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+@media screen and (min-width: 768px) {
+  .infos-contact-container {
+    flex-direction: row;
+  }
+
+  .infos-content > h1 {
+    margin-bottom: 30px;
+  }
+
+  .infos-content > p {
+    font-size: 15px;
+  }
+
+  .infos-content > h2 {
+    margin-top: 20px;
+  }
+
+  .contact-content > h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .adress-game {
+    margin-top: 30px;
+  }
+
+  .adress-game > p { 
+    font-size: 15px;
+  }
+
+  .message-content > textarea,
+  .email-content > input,
+  .lastname-content > input,
+  .firstname-content > input {
+    width: 200px;
+  }
+
+  .checkbox-content > label {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .infos-content {
+    height: 500px;
+  }
+  
+  .infos-content > h1 {
+    font-size: 25px;
+  }
+  
+  .infos-content > h2 {
+    font-size: 20px;
+  }
+
+  .infos-content > p {
+    font-size: 18px;
+  }
+  
+  .adress-game > p { 
+    font-size: 18px;
+  }
+  
+  .contact-content {
+    margin: 60px 100px;
+  }
+
+  .form-content-first {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .contact-content > h2 {
+    font-size: 25px;
+  }
+
+  .content-form {
+    display: flex;
+  }
+
+  .message-content,
+  .email-content,
+  .lastname-content,
+  .firstname-content {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px 20px 0px;
+  }
+
+  .message-content > label,
+  .email-content > label,
+  .lastname-content > label,
+  .firstname-content > label {
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .message-content > textarea,
+  .email-content > input,
+  .lastname-content > input,
+  .firstname-content > input {
+    width: 240px;
+  }
+}

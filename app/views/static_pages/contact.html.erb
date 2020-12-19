@@ -1,1 +1,51 @@
-<h2>Nous contacter</h2>
+ <section>
+    <div class="infos-contact-container">
+      <div class="infos-content">
+        <h1>Infos</h1>
+        <h2>Horaires du parc</h2>
+        <p>Du lundi au jeudi : <%= Park.all.first.first_part_schedules %><br>
+           Du vendredi au samedi : <%= Park.all.first.second_part_schedules %><br>
+          Dimanche : <%= Park.all.first.last_part_schedules %>
+        </p>
+        <div class="adress-game">
+          <h3>Game Zone</h3>
+          <p>
+            Boulevard de Parc, <br>
+            77700 Coupvray
+          </p>
+        </div>   
+      </div>
+      <div class="contact-content">
+        <h2>Contact</h2>
+        <form action="" method="">
+          <div class="form-content-first">
+          <div class="firstname-content">
+            <label for="firstname">Prénom</label>
+            <input type="text" id="firsname" name="firstname" required>
+          </div>
+          <div class="lastname-content">
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" name="lastname" required>
+          </div>
+        </div>
+          <div class="content-form">
+            <div class="email-content">
+              <label for="email"> Adresse email</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div class="message-content">
+              <label for="message">Votre message</label>
+              <textarea type="text" name="message" id="message"></textarea>
+            </div>
+          </div>
+            <div class="checkbox-content">
+              <input type="checkbox" class="conditions" name="" value="">
+              <label for=""> En cochant cette case, j'accepte les conditions générales d'utilisation et les mentions légales.</label>
+            </div>
+            <div class="btn-content">
+              <a href=""><button class="btn" type="submit" value="Subscribe!">Envoyer</button></a>
+            </div>
+        </form>
+      </div>
+    </div>
+  </section>
