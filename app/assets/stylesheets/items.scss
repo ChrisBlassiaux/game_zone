@@ -1,0 +1,182 @@
+.number-item-show {
+  margin-top: 15px;
+}
+
+.header-background-shop {
+  background-image: image-url("background-boutique");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-background-shop h1 {
+  color: #F6CD40;
+  text-align: center;
+  font-family: "commando";
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+
+.key-ring {
+  width: 50%;
+}
+
+.key-shop {
+  padding: 20px;
+  text-align: center;
+}
+
+.key-shop > h2 {
+  font-family: "josefin", sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.container-shop {
+  margin-top: 30px;
+}  
+
+@media screen and (min-width: 768px) {
+  .header-background-shop {
+    height: 180px;
+  }
+
+  .container-shop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }  
+}
+
+@media screen and (min-width: 992px) {
+  .header-background-shop {
+    height: 280px;
+  }
+
+  .container-shop {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }  
+}
+
+
+
+// show item 
+
+
+
+.key-product {
+  width: 40%;
+}
+
+.container-product {
+  text-align: center;
+  margin: 50px;
+}
+
+.product-text > h1 {
+  margin-top: 40px;
+  font-size: 18px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.description {
+  font-family: "josefin", sans-serif;
+  margin-top: 30px;
+}
+
+.content-description {
+  margin-bottom: 30px;
+  font-family: "josefin", sans-serif;
+  font-weight: lighter;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "commando";
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.input-content {
+  display: inline-grid;
+}
+
+@media screen and (min-width: 768px) {
+  .container-product {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+  }
+
+  .key-product {
+    width: 70%;
+  }
+
+  .content-product {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .product-text {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container-product {
+    justify-content: space-around;
+  }
+
+  .key-product {
+    width: 100%;
+  }
+
+  .product-text > h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .description {
+    font-size: 18px;
+  }
+  
+  .content-description {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
