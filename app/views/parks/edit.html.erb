@@ -1,14 +1,42 @@
+<section>
+    <div class="page-header">
+      <h1>Decouvrez la nouvelle generation des parcs d’attractions</h1>
+    </div>
+  </section>
+  <section>
+    <div class="container-login">
+      <h2>Modifier les informations du parc</h2>
+      <div class="content-login">
+        <div class="line-extrem-left"></div>
+        <div class="line-left"></div>
+        <p>
+          Modifier les informations concernant le parc Game Zone.
+        </p>
+      </div>
+    </div>
+    <%= form_for(@park) do |f| %>
+      <div class="container-form">
+        <div class="content-input">
+          <%= f.label :first_part_schedules %>:
+          <%= f.text_field :first_part_schedules %>
+        </div>
 
-<%= form_for(@park) do |f| %>
+        <div class="content-input">
+          <%= f.label :second_part_schedules %>:
+          <%= f.text_field :second_part_schedules %>
+        </div>
 
-  <%= f.label :first_part_schedules %>:
-  <%= f.text_field :first_part_schedules %><br />
+        <div class="content-input">
+          <%= f.label :last_part_schedules %>:
+          <%= f.text_field :last_part_schedules %>
+        </div>
 
-  <%= f.label :second_part_schedules %>:
-  <%= f.text_field :second_part_schedules %><br />
+        <div class="content-input">
+          <%= f.submit %>
+        </div>
+      </div>
+    <% end %>
+  </section>
 
-  <%= f.label :last_part_schedules %>:
-  <%= f.text_field :last_part_schedules %><br />
 
-  <%= f.submit %>
-<% end %>
+

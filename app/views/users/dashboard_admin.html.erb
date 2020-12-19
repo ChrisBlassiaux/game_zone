@@ -1,221 +1,238 @@
-Dashboard Admin
-
-<br><br>
-
-<h2>Accumuler l'xp des participants</h2>
-
-<%= form_tag("/users/add_participant", method: "post") do %>
-
-  <%= label_tag(:xp, "Quantité d'expérience") %>
-  <%= text_field_tag(:xp) %>
-
-  <%= label_tag(:identifiant, "Identifiant") %>
-  <%= text_field_tag(:identifiant) %>
-
-  <%= submit_tag("Envoyer les points") %>
-<% end %>
-
-<br><br>
-
-<h2>Park</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Horaires de Lundi à Jeudi</th>
-      <th>Horaires de Vendredi à Samedi</th>
-      <th>Horaires du Dimanche</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr>
-        <td><%= @park.first_part_schedules %></td>
-        <td><%= @park.second_part_schedules %></td>
-        <td><%= @park.last_part_schedules %></td>
-        <td><%= link_to 'Modifier', edit_park_path(@park.id) %></td>
-      </tr>
-  </tbody>
-</table>
-
-<br><br><br>
 
 
-<h2>Attractions</h2>
+<h2 class="title-admin">Dashboard Administrateur</h2>
+<div class="warpper">
+  <input class="radio" id="one" name="group" type="radio" checked>
+  <input class="radio" id="two" name="group" type="radio">
+  <input class="radio" id="three" name="group" type="radio">
+  <input class="radio" id="four" name="group" type="radio">
+  <input class="radio" id="five" name="group" type="radio">
+  <input class="radio" id="six" name="group" type="radio">
+  <input class="radio" id="seven" name="group" type="radio">
+  <div class="tabs">
+    <label class="tab" id="one-tab" for="one">Envoyer de l'xp</label>
+    <label class="tab" id="two-tab" for="two">Parc</label>
+    <label class="tab" id="three-tab" for="two">Attractions</label>
+    <label class="tab" id="four-tab" for="three">Actualités</label>
+    <label class="tab" id="five-tab" for="three">Produits</label>
+    <label class="tab" id="six-tab" for="three">Avatars</label>
+    <label class="tab" id="seven-tab" for="three">Utilisateurs</label>
+  </div>
+  <div class="panels">
+    <div class="panel" id="one-panel">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Experience points</th>
-      <th>Maximum size</th>
-      <th>Description</th>
-      <th>Video presentation</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <h2>Accumuler l'xp des participants</h2>
 
-  <tbody>
-    <% @attractions.each do |attraction| %>
-      <tr>
-        <td><%= attraction.name %></td>
-        <td><%= attraction.experience_points %></td>
-        <td><%= attraction.maximum_size %></td>
-        <td><%= attraction.description %></td>
-        <td><%= attraction.video_presentation %></td>
-        <td>
-          <% if attraction.pictures.attached? %>
-            <%= image_tag(attraction.pictures[0], :style => "width: 100px") %>
-          <% end %>
-        </td>
-        <td><%= link_to 'Show', attraction %></td>
-        <td><%= link_to 'Edit', edit_attraction_path(attraction) %></td>
-        <td><%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <%= form_tag("/users/add_participant", method: "post") do %>
 
-<br><br><br>
+        <%= label_tag(:xp, "Quantité d'expérience") %>
+        <%= text_field_tag(:xp) %>
 
-<%= link_to 'New Attraction', new_attraction_path %>
+        <%= label_tag(:identifiant, "Identifiant") %>
+        <%= text_field_tag(:identifiant) %>
 
+        <%= submit_tag("Envoyer les points") %>
+      <% end %>
 
-<h2>News</h2>
+    </div>
+    <div class="panel" id="two-panel">
+      <h2>Park</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>titre</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Horaires de Lundi à Jeudi</th>
+            <th>Horaires de Vendredi à Samedi</th>
+            <th>Horaires du Dimanche</th>
+            <th colspan="2"></th>
+          </tr>
+        </thead>
 
-  <tbody>
-    <% @news.each do |news| %>
-      <tr>
-        <td><%= news.title %></td>
-        <td><%= news.description %></td>
-        <td>
-          <% if news.picture.attached? %>
-            <%= image_tag(news.picture, :style => "width: 100px") %>
-          <% end %>
-        </td>
-        <td><%= link_to 'Show', news %></td>
-        <td><%= link_to 'Edit', edit_news_path(news) %></td>
-        <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+            <tr>
+              <td><%= @park.first_part_schedules %></td>
+              <td><%= @park.second_part_schedules %></td>
+              <td><%= @park.last_part_schedules %></td>
+              <td><%= link_to 'Modifier', edit_park_path(@park.id) %></td>
+            </tr>
+        </tbody>
+      </table>
 
-<br>
+    </div>
+    <div class="panel" id="three-panel">
+      <h2>Attractions</h2>
 
-<%= link_to 'New news', new_news_path %>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Experience points</th>
+              <th>Maximum size</th>
+              <th>Description</th>
+              <th>Video presentation</th>
+              <th>Image</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<br><br><br>
+          <tbody>
+            <% @attractions.each do |attraction| %>
+              <tr>
+                <td><%= attraction.name %></td>
+                <td><%= attraction.experience_points %></td>
+                <td><%= attraction.maximum_size %></td>
+                <td><%= attraction.description %></td>
+                <td><%= attraction.video_presentation %></td>
+                <td>
+                  <% if attraction.pictures.attached? %>
+                    <%= image_tag(attraction.pictures[0], :style => "width: 100px") %>
+                  <% end %>
+                </td>
+                <td><%= link_to 'Show', attraction %></td>
+                <td><%= link_to 'Edit', edit_attraction_path(attraction) %></td>
+                <td><%= link_to 'Destroy', attraction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-<h2>Items</h2>
+        <%= link_to 'New Attraction', new_attraction_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nom</th>
-      <th>Description</th>
-      <th>Prix unitaire hors taxe</th>
-      <th>Prix unitaire TTC</th>
-      <th>TVA</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      </div>
+      <div class="panel" id="four-panel">
+          <h2>News</h2>
 
-  <tbody>
-    <% @items.each do |items| %>
-      <tr>
-        <td><%= items.name %></td>
-        <td><%= items.description %></td>
-        <td><%= items.unit_price_ht %></td>
-        <td><%= items.unit_price_ttc %></td>
-        <td><%= items.tva %></td>
-        <td>
-          <% if items.picture.attached? %>
-            <%= image_tag(items.picture, :style => "width: 100px") %>
-          <% end %>
-        </td>
-        <td><%= link_to 'Show', items %></td>
-        <td><%= link_to 'Edit', edit_item_path(items) %></td>
-        <td><%= link_to 'Destroy', items, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <table>
+          <thead>
+            <tr>
+              <th>titre</th>
+              <th>Description</th>
+              <th>Image</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<br>
+          <tbody>
+            <% @news.each do |news| %>
+              <tr>
+                <td><%= news.title %></td>
+                <td><%= news.description %></td>
+                <td>
+                  <% if news.picture.attached? %>
+                    <%= image_tag(news.picture, :style => "width: 100px") %>
+                  <% end %>
+                </td>
+                <td><%= link_to 'Show', news %></td>
+                <td><%= link_to 'Edit', edit_news_path(news) %></td>
+                <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-<%= link_to 'New items', new_item_path %>
+        <br>
 
-<br><br><br>
+        <%= link_to 'New news', new_news_path %>
+      </div>
+      <div class="panel" id="five-panel">
+          <h2>Items</h2>
 
-<h1>Avatars</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Description</th>
+              <th>Prix unitaire hors taxe</th>
+              <th>Prix unitaire TTC</th>
+              <th>TVA</th>
+              <th>Image</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <tbody>
+            <% @items.each do |items| %>
+              <tr>
+                <td><%= items.name %></td>
+                <td><%= items.description %></td>
+                <td><%= items.unit_price_ht %></td>
+                <td><%= items.unit_price_ttc %></td>
+                <td><%= items.tva %></td>
+                <td>
+                  <% if items.picture.attached? %>
+                    <%= image_tag(items.picture, :style => "width: 100px") %>
+                  <% end %>
+                </td>
+                <td><%= link_to 'Show', items %></td>
+                <td><%= link_to 'Edit', edit_item_path(items) %></td>
+                <td><%= link_to 'Destroy', items, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-  <tbody>
-    <% @avatars.each do |avatar| %>
-      <tr>
-        <td><%= avatar.url %></td>
-        <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
-        <td><%= link_to 'Destroy', avatar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <br>
 
-<br>
+        <%= link_to 'New items', new_item_path %>
 
-<%= link_to 'New Avatar', new_avatar_path %>
+      </div>
+      <div class="panel" id="six-panel">
+            <h1>Avatars</h1>
 
+        <table>
+          <thead>
+            <tr>
+              <th>Url</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
+          <tbody>
+            <% @avatars.each do |avatar| %>
+              <tr>
+                <td><%= avatar.url %></td>
+                <td><%= link_to 'Edit', edit_avatar_path(avatar) %></td>
+                <td><%= link_to 'Destroy', avatar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-<br><br><br>
+        <br>
 
-<h2>Users</h2>
+        <%= link_to 'New Avatar', new_avatar_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th>email</th>
-      <th>identifiant</th>
-      <th>xp</th>
-      <th>last_name</th>
-      <th>first_name</th>
-      <th>city</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      </div>
+      <div class="panel" id="seven-panel">
+          <h2>Users</h2>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= user.identifiant %></td>
-        <td><%= user.xp %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.first_name %></td>
-        <td><%= user.city %></td>
-        <td><%= link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <table>
+          <thead>
+            <tr>
+              <th>email</th>
+              <th>identifiant</th>
+              <th>xp</th>
+              <th>last_name</th>
+              <th>first_name</th>
+              <th>city</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.email %></td>
+                <td><%= user.identifiant %></td>
+                <td><%= user.xp %></td>
+                <td><%= user.last_name %></td>
+                <td><%= user.first_name %></td>
+                <td><%= user.city %></td>
+                <td><%= link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

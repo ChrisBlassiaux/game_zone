@@ -72,6 +72,7 @@
 }
 
 .content-input {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -81,17 +82,9 @@
   font-family: "josefin", sans-serif;
 }
 
-.content-input > input {
-  width: 40%;
-}
-
 .password-content > label {
   display: block;
   font-family: "josefin", sans-serif;
-}
-
-.password-content > input {
-  width: 40%;
 }
 
 .password-content {
@@ -145,11 +138,13 @@
   }
 
   .container-login {
-    padding: 50px 200px 50px 200px;
+    max-width: 460px;
+    margin: 0 auto;
   }
 
   .container-form {
-    padding: 0px 200px 50px 200px;
+    max-width: 460px;
+    margin: 0 auto;
   }
 }
 

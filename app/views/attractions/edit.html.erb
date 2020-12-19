@@ -1,6 +1,66 @@
-<h1>Editing Attraction</h1>
+<section>
+    <div class="page-header">
+      <h1>Decouvrez la nouvelle generation des parcs d’attractions</h1>
+    </div>
+  </section>
+  <section>
+    <div class="container-login">
+      <h2>Modifier les informations</h2>
+      <div class="content-login">
+        <div class="line-extrem-left"></div>
+        <div class="line-left"></div>
+        <p>
+          Modifier les informations de l'attaction suivante.
+        </p>
+      </div>
+    </div>
+    <%= form_with(model: @attraction, local: true) do |form| %>
+    <div class="container-form">
+      <% if @attraction.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@attraction.errors.count, "error") %> prohibited this attraction from being saved:</h2>
 
-<%= render 'form', attraction: @attraction %>
+          <ul>
+            <% @attraction.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-<%= link_to 'Show', @attraction %> |
-<%= link_to 'Back', attractions_path %>
+      <div class="content-input">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="content-input">
+        <%= form.label :experience_points %>
+        <%= form.number_field :experience_points %>
+      </div>
+
+      <div class="content-input">
+        <%= form.label :maximum_size %>
+        <%= form.number_field :maximum_size %>
+      </div>
+
+      <div class="content-input">
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+      </div>
+
+      <div class="content-input">
+        <%= form.label :video_presentation %>
+        <%= form.text_field :video_presentation %>
+      </div>
+
+      <div class="content-input"> 
+        <%= form.label :pictures %>
+        <%= form.file_field :pictures, :multiple => true %>
+      </div>
+
+      <div class="content-input">
+        <%= form.submit %>
+      </div>
+    </div>
+    <% end %>
+  </section>

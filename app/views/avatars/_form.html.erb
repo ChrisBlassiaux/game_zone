@@ -1,22 +1,43 @@
-<%= form_with(model: avatar, local: true) do |form| %>
-  <% if avatar.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(avatar.errors.count, "error") %> prohibited this avatar from being saved:</h2>
-
-      <ul>
-        <% avatar.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<section>
+    <div class="page-header">
+      <h1>Decouvrez la nouvelle generation des parcs d’attractions</h1>
     </div>
-  <% end %>
+  </section>
+  <section>
+    <div class="container-login">
+      <h2>Creez ou modifiez une actualite</h2>
+      <div class="content-login">
+        <div class="line-extrem-left"></div>
+        <div class="line-left"></div>
+        <p>
+          Créez ou modifiez une actualité en renseignant les informations suivantes.
+        </p>
+      </div>
+    </div>
+ 
+    <div class="container-form">
+      <%= form_with(model: avatar, local: true) do |form| %>
+        <% if avatar.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(avatar.errors.count, "error") %> prohibited this avatar from being saved:</h2>
 
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url %>
-  </div>
+            <ul>
+              <% avatar.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+        <div class="content-input">
+          <%= form.label :url %>
+          <%= form.text_field :url %>
+        </div>
+
+        <div class="content-input">
+          <%= form.submit %>
+        </div>
+      <% end %>
+    </div>
+
+  </section>

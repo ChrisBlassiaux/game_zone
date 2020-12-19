@@ -11,10 +11,10 @@
     <div class="input-content"> 
       <p class="description">Quantité:</p>
       <%= form_for @order_item, remote: true  do |f|%>
-            <%= f.hidden_field :item_id, :value => @item.id %>
-            <%= f.number_field :quantity, :value => 1, :min => 1, class: 'number' %> <br>
-            <%= f.submit "Ajouter au panier", class: 'btn' %>
-          <% end %>
+        <%= f.hidden_field :item_id, :value => @item.id %>
+        <%= f.number_field :quantity, :value => 1, :min => 1, class: 'number' %> <br>
+        <%= f.submit "Ajouter au panier", class: 'btn' %>
+      <% end %>
     </div>
   </div>
 </div>

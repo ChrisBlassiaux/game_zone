@@ -5,83 +5,65 @@
   </section>
   <section>
     <div class="container-login">
-      <h2>Se connecter</h2>
+      <h2>Ajouter un produit</h2>
       <div class="content-login">
         <div class="line-extrem-left"></div>
         <div class="line-left"></div>
         <p>
-          Connectez vous pour accéder à votre profil, votre gamertag (attractions, spectacles, restaurants, récompenses) et de les retrouver ensuite que ce soit sur le site web.
+          Ajoutez un produit sur le site web pour permettre aux utilisateurs de profiter du park même à distance.
         </p>
       </div>
     </div>
-    <form action="" method="">
+    <%= form_with(model: item, local: true, multipart: true) do |form| %>
       <div class="container-form">
+        <% if item.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+            <ul>
+              <% item.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
         <div class="content-input">
-          <label for="email">Adresse email</label>
-          <input type="email" name="email" id="email" required>
+          <%= form.label :name %>
+          <%= form.text_field :name %>
         </div>
-        <div class="password-content">
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" name="password" required>
-          <a href="">Mot de passe oublié ? Réinitialisez votre mot de passe</a>
+
+        <div class="content-input">
+          <%= form.label :description %>
+          <%= form.text_field :description %>
         </div>
-        <!-- <div class="checkbox-content">
-          <input type="checkbox" class="conditions" name="" value="">
-          <label for=""> En cochant cette case, j'accepte les conditions générales d'utilisation et les mentions légales.</label>
-        </div> -->
-        <div class="btn-content">
-          <button class="btn" type="submit" value="Subscribe!">Envoyer</button>
+
+        <div class="content-input">
+          <%= form.label :unit_price_ht %>
+          <%= form.text_field :unit_price_ht %>
+        </div>
+
+        <div class="content-input">
+          <%= form.label :unit_price_ttc %>
+          <%= form.text_field :unit_price_ttc %>
+        </div>
+
+        <div class="content-input">
+          <%= form.label :tva %>
+          <%= form.number_field :tva %>
+        </div>
+
+        <div class="content-input"> 
+          <%= form.label :picture %>
+          <%= form.file_field :picture %>
+        </div>
+
+        <div class="content-input">
+          <%= form.submit %>
         </div>
       </div>
-    </form>
+    <% end %>
   </section>
 
 
 
-  <%= form_with(model: item, local: true, multipart: true) do |form| %>
-  <% if item.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-      <ul>
-        <% item.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :unit_price_ht %>
-    <%= form.text_field :unit_price_ht %>
-  </div>
-
-  <div class="field">
-    <%= form.label :unit_price_ttc %>
-    <%= form.text_field :unit_price_ttc %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tva %>
-    <%= form.number_field :tva %>
-  </div>
-
-  <div class="field"> 
-    <%= form.label :picture %>
-    <%= form.file_field :picture %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

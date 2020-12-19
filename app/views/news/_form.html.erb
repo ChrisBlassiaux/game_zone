@@ -1,32 +1,51 @@
-<%= form_with(model: news, local: true) do |form| %>
-  <% if news.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
-
-      <ul>
-        <% news.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<section>
+    <div class="page-header">
+      <h1>Decouvrez la nouvelle generation des parcs d’attractions</h1>
     </div>
-  <% end %>
+  </section>
+  <section>
+    <div class="container-login">
+      <h2>Creez ou modifiez une actualite</h2>
+      <div class="content-login">
+        <div class="line-extrem-left"></div>
+        <div class="line-left"></div>
+        <p>
+          Créez ou modifiez une actualité en renseignant les informations suivantes.
+        </p>
+      </div>
+    </div>
+    <%= form_with(model: news, local: true) do |form| %>
+    <div class="container-form">
+      <% if news.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(news.errors.count, "error") %> prohibited this news from being saved:</h2>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+          <ul>
+            <% news.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
+      <div class="content-input">
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
 
-  <div class="field"> 
-    <%= form.label :picture %>
-    <%= form.file_field :picture %>
-  </div>
+      <div class="content-input">
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+      <div class="content-input"> 
+        <%= form.label :picture %>
+        <%= form.file_field :picture %>
+      </div>
+
+      <div class="content-input">
+        <%= form.submit %>
+      </div>
+    </div>
+    <% end %>
+  </section>
