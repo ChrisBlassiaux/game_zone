@@ -1,0 +1,185 @@
+
+.page-header {
+  background-image: image-url("login-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 164px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header > h1 {
+  text-align: center;
+  font-family: "commando";
+  color: #F6CD40;
+  width: 80%;
+  letter-spacing: 1px;
+}
+
+.container-login {
+  padding: 50px;
+}
+
+.content-login {
+  display: flex;
+}
+
+.container-login > h2 {
+  font-family: "commando";
+  color: #f1c01c;
+}
+
+.line-extrem-left {
+  border: 0.5px solid black;
+  height: 50px;
+  margin: auto 3px auto 0px;
+}
+
+.line-left {
+  border: 0.5px solid black;
+  width: 0;
+  margin-right: 5px;
+}
+
+.content-login > p {
+  font-family: "josefin", sans-serif;
+  font-weight: lighter;
+  line-height: 20px;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.container-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.content-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-input > label {
+  display: block;
+  font-family: "josefin", sans-serif;
+}
+
+.content-input > input {
+  width: 40%;
+}
+
+.password-content > label {
+  display: block;
+  font-family: "josefin", sans-serif;
+}
+
+.password-content > input {
+  width: 40%;
+}
+
+.password-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.password-content > a {
+  text-decoration: none;
+  color: #747474;
+  font-size: 10px;
+  font-family: "josefin", sans-serif;
+  font-weight: lighter;
+}
+
+.checkbox-content > label {
+  font-family: "josefin", sans-serif;
+  font-weight: lighter;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    height: 235px;
+  }
+
+  .page-header > h1 {
+    width: 60%;
+  }
+
+  .container-login {
+    padding: 50px 100px 50px 100px;
+  }
+
+  .container-form {
+    padding: 0px 100px 50px 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page-header {
+    height: 310px;
+  }
+
+  .page-header > h1 {
+    width: 50%;
+  }
+  .container-login > h2{
+    font-size: 18px;
+  }
+
+  .container-login {
+    padding: 50px 200px 50px 200px;
+  }
+
+  .container-form {
+    padding: 0px 200px 50px 200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    height: 400px;
+  }
+
+  .page-header > h1 {
+    width: 46%;
+    font-size: 35px;
+  }
+
+  .container-login {
+    padding: 50px 300px 50px 300px;
+  }
+
+  .container-login > h2{
+    font-size: 30px;
+  }
+
+  .container-login > p{
+    font-size: 18px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+
+  .container-form {
+    padding: 0px 300px 50px 300px;
+  }
+}

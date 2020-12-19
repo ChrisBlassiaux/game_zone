@@ -20,14 +20,14 @@
 
 .infos-content > h2 {
   color: #d2d2d2;
-  font-family: "josefin";
+  font-family: "josefin", sans-serif;
   font-size: 18px;
   margin-left: 20px;
 }
 
 .infos-content > p {
   color: #d2d2d2;
-  font-family: "josefin-light";
+  font-family: "josefin-light", sans-serif;
   font-size: 14px;
   line-height: 22px;
   margin-left: 20px;
@@ -41,22 +41,22 @@
 
 .adress-game > h3 {
   color: #F6CD40;
-  font-family: "josefin";
+  font-family: "josefin", sans-serif;
   font-size: 18px;
 }
 
 .adress-game > p {
   color: #d2d2d2;
-  font-family: "josefin-light";
+  font-family: "josefin-light", sans-serif;
   font-size: 14px;
   line-height: 22px;
 }
 
-.contact-content {
+.contact-page-content {
   margin: 60px;
 }
 
-.contact-content > h2 {
+.contact-page-content > h2 {
   color: #881F6A;
   border-bottom: 1px solid black;
   width: 90px;
@@ -87,12 +87,12 @@
 .email-content > label,
 .lastname-content > label,
 .firstname-content > label {
-  font-family: "josefin-light";
+  font-family: "josefin-light", sans-serif;
   margin-bottom: 5px;
 }
 
 .checkbox-content > label {
-  font-family: "josefin-light";
+  font-family: "josefin-light", sans-serif;
   font-size: 10px;
 }
 
@@ -130,7 +130,7 @@
     margin-top: 20px;
   }
 
-  .contact-content > h2 {
+  .contact-page-content > h2 {
     margin-top: 0;
     margin-bottom: 30px;
   }
@@ -176,7 +176,7 @@
     font-size: 18px;
   }
   
-  .contact-content {
+  .contact-page-content {
     margin: 60px 100px;
   }
 
@@ -185,7 +185,7 @@
     margin-bottom: 20px;
   }
 
-  .contact-content > h2 {
+  .contact-page-content > h2 {
     font-size: 25px;
   }
 

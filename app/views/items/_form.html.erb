@@ -1,4 +1,44 @@
-<%= form_with(model: item, local: true, multipart: true) do |form| %>
+<section>
+    <div class="page-header">
+      <h1>Decouvrez la nouvelle generation des parcs d’attractions</h1>
+    </div>
+  </section>
+  <section>
+    <div class="container-login">
+      <h2>Se connecter</h2>
+      <div class="content-login">
+        <div class="line-extrem-left"></div>
+        <div class="line-left"></div>
+        <p>
+          Connectez vous pour accéder à votre profil, votre gamertag (attractions, spectacles, restaurants, récompenses) et de les retrouver ensuite que ce soit sur le site web.
+        </p>
+      </div>
+    </div>
+    <form action="" method="">
+      <div class="container-form">
+        <div class="content-input">
+          <label for="email">Adresse email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="password-content">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" name="password" required>
+          <a href="">Mot de passe oublié ? Réinitialisez votre mot de passe</a>
+        </div>
+        <!-- <div class="checkbox-content">
+          <input type="checkbox" class="conditions" name="" value="">
+          <label for=""> En cochant cette case, j'accepte les conditions générales d'utilisation et les mentions légales.</label>
+        </div> -->
+        <div class="btn-content">
+          <button class="btn" type="submit" value="Subscribe!">Envoyer</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+
+
+  <%= form_with(model: item, local: true, multipart: true) do |form| %>
   <% if item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
