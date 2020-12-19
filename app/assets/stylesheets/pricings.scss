@@ -1,0 +1,115 @@
+.header-background {
+  background-image: url("../images/ticket-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-background h1 {
+  color: #F6CD40;
+  text-align: center;
+  font-family: "commando";
+  letter-spacing: 1px;
+  line-height: 28px;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "commando";
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.price-day {
+  font-family: "commando";
+  color: #71388B;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 70px;
+}
+
+.calculator {
+  text-align: center;
+  color: black;
+  font-family: "josefin", sans-serif;
+  font-weight: lighter;
+}
+
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.card-content {
+  border: 1px solid grey;
+  width: 250px;
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+}
+
+.number {
+  margin-top: 40px;
+}
+
+
+.title-card {
+  margin-top: 40px;
+  font-size: 20px;
+  font-family: "commando";
+  letter-spacing: 2px;
+  color: #71388B;
+}
+
+.total-day {
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+  margin: 50px auto 50px auto;
+  text-align: center;
+  font-family: "josefin", sans-serif;
+}
+
+.card-content > p {
+  font-family: "josefin", sans-serif;
+}
+
+
+@media screen and (min-width: 992px) {
+  .header-background h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 45px;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 70px;
+  }
+
+  .card-content {
+    width: 240px;
+    margin-top: 0px;
+  }
+}
