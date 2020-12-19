@@ -1,0 +1,84 @@
+#today {
+  text-align: center;
+}
+
+#app-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr) ;
+  grid-template-rows: repeat(5, 1fr);
+  padding: 30px 0px 60px 0px;
+}
+
+.day-week {
+  margin-top: 30px;
+}
+
+.day {
+  padding: 20px;
+  background-color: #eeeeee;
+  border: 0.2px solid grey;
+  text-align: center;
+}
+
+.color-day {
+  border: 5px solid #eeeeee;
+  margin-right: 10px;
+}
+
+.weekend {
+  color: white;
+  background-color: #881F6A;
+  text-align: center;
+}
+
+.color-weekend {
+  border: 5px solid #881F6A;
+  margin-right: 10px;
+}
+
+.nocturne {
+  background-color: #323868;
+  color: white;
+  text-align: center;
+}
+
+.color-nocturne {
+  border: 5px solid #323868;
+  margin-right: 10px;
+}
+
+.FirstTuesday {
+  background-color: #71388B;
+  color: white;
+  text-align: center;
+}
+
+.color-tuesday {
+  border: 5px solid #71388B;
+  margin-right: 10px;
+}
+
+.LastSunday {
+  background-color: #F6CD40;
+  color: white;
+  text-align: center;
+}
+
+.color-lastsunday {
+  border: 5px solid #F6CD40;
+  margin-right: 10px;
+}
+
+.hours-park {
+  padding: 30px;
+}
+
+
+@media screen and (min-width: 768px) {
+  #app-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr) ;
+    grid-template-rows: repeat(5, 1fr);
+    padding: 30px 60px 60px 60px;
+  }
+}

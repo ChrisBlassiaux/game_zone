@@ -1,1 +1,40 @@
-<h2>Se rendre au parc</h2>
+<div class="container">
+		<section class="informations">
+			<h2 class="title">SE RENDRE AU PARC</h2>
+			<div class="information-blablacar">
+				<div class="first-div">
+					<img src="img/cars.png" alt="">
+					<h3>Calculer votre intinéraire en voiture</h3>
+				</div>
+				<p>N’oubliez pas, vous pouvez également covoiturer avec notre partenaire <span>BlaBlacar</span>  !</p>
+				<div class="start">
+					<p>
+						Arrivée: <br>
+						<span class="game"> GAME ZONE</span> <br>
+						787 rue AZERTY
+					</p>
+				</div>
+			</div>
+			<div class="sncf">
+				<div class="first-div">
+					<img src="img/train.png" alt="">
+					<h3>Venir en train</h3>
+				</div>
+				<p>Accès : gare du Nord Paris</p>
+				<p>Commandez votre trajet en ligne sur le site de la
+					<a href="https://www.sncf.com/fr"> sncf.fr</a> 
+					ou au guichet ou automates au sein de votre gare</p>
+			</div>
+		</section>
+		<section class="map">
+			<div id="carte"></div>
+		</section>
+	</div>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+
+	<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>

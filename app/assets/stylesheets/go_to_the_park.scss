@@ -1,0 +1,78 @@
+span.go {
+  color: #B91466;
+}
+
+a.go {
+  text-decoration: none;
+  color: #B91466;
+}
+
+.title {
+  color: #881F6A;
+  font-weight: 400;
+  font-size: 31px;
+  margin: 30px 5px;
+}
+.information-blablacar {
+  color: white;
+  background-color: #323868;
+  padding: 30px 40px;
+}
+.first-div {
+  display: flex;
+  flex-direction: row;
+}
+.first-div img {
+  width: 40px;
+  height: 38px;
+  padding: 15px 0;
+}
+.first-div h3 {
+  padding: 5px 0 0 20px;
+  font-size: 15px;
+}
+.informations p {
+  padding: 10px 40px;
+  font-size: 18px;
+}
+.start {
+  background-color: #1C1F3D ;
+}
+.sncf {
+  color: #575757;
+  padding: 30px 40px;
+}
+.sncf p {
+  font-size: 20px;
+}
+.game {
+  color: #F6CD40;
+}
+.map {
+  height: 450px;
+}
+#carte {
+  height: 100%;
+}
+@media screen and (min-width: 750px) and (max-width: 900px){
+  .title {
+      margin:30px 200px;
+  }
+}
+@media screen and (min-width: 901px){
+  .container {
+      display: flex;
+      flex-direction: row;
+  }
+  .informations {
+      width: 50%;
+      font-weight: 400;
+  }
+  .map {
+      width: 80%;
+  }
+  #carte {
+      height: 670px;
+  
+}
+} 
