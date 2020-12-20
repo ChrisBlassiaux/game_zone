@@ -76,16 +76,18 @@
           <h3>Email : <%= current_user.email %></h3>
           <h3><%= link_to 'Modifier mon compte', edit_user_registration_path %></h3>
 
-          <%= form_for(current_user) do |f| %>
+         <h3>Modifier mon avatar
+            <%= form_for(current_user) do |f| %>
 
-            <select name="avatar_id" id="avatar_id">
-              <% @avatars.each do |avatar| %>
-                <option value=<%= avatar.id %>><%= avatar.url %></option>
-              <% end %>
-            </select>
+              <select name="avatar_id" id="avatar_id">
+                <% @avatars.each do |avatar| %>
+                  <option value=<%= avatar.id %>><%= avatar.id %></option>
+                <% end %>
+              </select>
 
-            <%= f.submit %>
-          <% end %>
+              <%= f.submit %>
+            <% end %>
+         </h3>
         </section>
 
         <section class="qr-code-container">
