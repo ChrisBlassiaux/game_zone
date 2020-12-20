@@ -1,0 +1,245 @@
+
+.container-profile {
+  background-color: #282c53;
+}
+
+.container-badge_xp {
+  position: relative;
+}
+
+.avatar-profile-badge {
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  width: 60px;
+}
+
+.profile-avatar-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding-left: 50px;
+  // margin-top: 20px;
+  position: relative;
+  background-image: image-url("profile-lines-background");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filler-img,
+.profile-avatar-picture {
+  width: 100px;
+}
+
+.profile-avatar-picture {
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  bottom: -21%;
+}
+
+.avatar-name-informations {
+  margin-left: 110px;
+}
+
+.avatar-name-informations h3 {
+  color: #b91466;
+  font-family: "JosefinSans", sans-serif;
+  margin: 0;
+}
+
+.avatar-name-informations h4 {
+  color: white;
+  font-family: "JosefinSans", sans-serif;
+  margin: 0;
+}
+
+.profile-experience-total-amount-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 5px;
+}
+
+.profile-medal {
+  width: 30px;
+  height: 30px;
+}
+
+.experience-amount {
+  margin: 0;
+  margin-left: 5px;
+  color: white;
+}
+
+.showcase-container,
+.profile-informations,
+.rewards-container,
+.qr-code-container,
+.profile-badges-container {
+  width: 90%;
+  margin: 20px auto 0 auto;
+  background-color: #2a2525;
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.showcase-container h2,
+.profile-informations h2,
+.rewards-container h2,
+.qr-code-container h2,
+.profile-badges-container h2 {
+  text-align: center;
+  color: white;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.upper-line,
+.bottom-line {
+  display: flex;
+  justify-content: center;
+}
+
+.showcase-reward-picture {
+  margin: 20px;
+}
+
+.profile-informations h3 {
+  margin: 20px;
+  color: white;
+}
+
+.reward-picture {
+  width: 100%;
+}
+
+.desktop-profile-informations {
+  display: none;
+}
+
+.profile-qr-code-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-qr-code-picture {
+  width: 30%;
+}
+
+.profile-badge-picture {
+  height: 100px;
+}
+
+.profile-gamecenter-picture {
+  margin-left: 23px;
+  height: 121px;
+}
+
+.profile-gamezone-badge {
+  height: 110px;
+}
+
+.badge-experience-amount {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-badges-line {
+  display: flex;
+}
+
+.badge-experience-amount h3 {
+  color: white;
+  text-align: center;
+}
+
+.gamecenter-score {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .profile-avatar-container {
+    position: relative;
+    background-image: image-url("tablet-lines-background");
+    background-repeat: no-repeat;
+  }
+
+  .profile-badges-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .profile-avatar-container {
+    position: relative;
+    background-image: image-url("desktop-lines-background");
+    background-repeat: no-repeat;
+  }
+  .showcase-container,
+  .profile-informations,
+  .rewards-container,
+  .qr-code-container,
+  .profile-badges-container {
+    width: 90%;
+    margin: 20px auto 0 auto;
+    background-color: #2a2525;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+  }
+  .reward-pictures-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .showcase-reward-picture {
+    margin: 0 40px 20px 40px;
+  }
+
+  .desktop-profile-informations {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #2a2525;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .desktop-profile-informations h2 {
+    text-align: center;
+    color: white;
+    font-family: "commando";
+    letter-spacing: 1px;
+  }
+
+  .desktop-profile-informations h3 {
+    margin: 20px;
+    color: white;
+  }
+
+  .profile-informations {
+    display: none;
+  }
+
+  .rewards-information-pass-container {
+    display: flex;
+  }
+
+  .rewards-container {
+    width: 48%;
+  }
+
+  .informations-pass-container {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profil-badges-logos {
+    display: flex;
+    justify-content: space-around;
+  }
+}

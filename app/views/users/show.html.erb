@@ -1,34 +1,166 @@
-Mon compte :
+<div class="container-profile">
+  <section class="profile-avatar-container">
+ 
+      <div class="container-badge_xp">
+        <% if current_user.xp < 500 %>
+          <%= image_tag "medails/bronze.png", class: 'profile-avatar-picture' %>
+        <% elsif current_user.xp >= 500 && current_user.xp < 1000 %>
+          <%= image_tag "medails/argent.png", class: 'profile-avatar-picture' %>
+        <% elsif current_user.xp >= 1000 && current_user.xp < 2500 %>
+          <%= image_tag "medails/or.png", class: 'profile-avatar-picture' %>
+        <% else %>
+          <%= image_tag "medails/platine.png", class: 'profile-avatar-picture' %>
+        <% end %>
+        <img src=<%= Avatar.find(current_user.avatar_id).url %> alt="Avatar de l'utilisateur" class="avatar-profile-badge">
+      </div>
 
-<%= current_user.identifiant %>
+      <div class="avatar-name-informations">
+        <h3><%= current_user.identifiant %></h3>
+        <div class="profile-experience-total-amount-container">
 
-<div>
-<br> 
-  avatar_id :<%= current_user.avatar_id %>
+          <%= image_tag "controller-medal.png", alt: 'medal controller', class: 'profile-medal' %>
+
+          <h4 class="experience-amount"><%= current_user.xp %></h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-container">
+      <h2>Vitrine</h2>
+      <div class="reward-pictures-container">
+        <div class="upper-line">
+
+          <%= image_tag "reward.png", alt: 'reward picture', class: 'showcase-reward-picture' %>
+          <%= image_tag "reward.png", alt: 'reward picture', class: 'showcase-reward-picture' %>
+          <%= image_tag "reward.png", alt: 'reward picture', class: 'showcase-reward-picture' %>
+
+        </div>
+
+        <div class="bottom-line">
+
+          <%= image_tag "reward.png", alt: 'reward picture', class: 'showcase-reward-picture' %>
+          <%= image_tag "reward.png", alt: 'reward picture', class: 'showcase-reward-picture' %>
+          <%= image_tag "reward.png", alt: 'reward picture', class: 'showcase-reward-picture' %>
+
+        </div>
+      </div>
+    </section>
+    <div class="rewards-information-pass-container">
+      <section class="profile-informations">
+        <h2>Informations</h2>
+        <h3>Prénom: <%= current_user.first_name ? current_user.first_name : 'Pas renseigné' %></h3>
+        <h3>Nom: <%= current_user.last_name ? current_user.last_name : 'Pas renseigné' %></h3>
+        <h3>Ville: <%= current_user.city ? current_user.city : 'Pas renseigné' %></h3>
+        <h3>Email : <%= current_user.email %></h3>
+        <h3><%= link_to 'Modifier mon compte', edit_user_registration_path %></h3>
+      </section>
+
+      <section class="rewards-container">
+        <h2>Recompenses</h2>
+
+        <%= image_tag "reward-recruit.png", alt: 'reward-information', class: 'reward-picture' %>
+        <%= image_tag "reward-elit-commando.png", alt: 'reward-information', class: 'reward-picture' %>
+        <%= image_tag "reward-invincible.png", alt: 'reward-information', class: 'reward-picture' %>
+        <%= image_tag "reward-young-driver.png", alt: 'reward-information', class: 'reward-picture' %>
+        <%= image_tag "reward-battlekart.png", alt: 'reward-information', class: 'reward-picture' %>
+        <%= image_tag "reward-battlekart-objects.png", alt: 'reward-information', class: 'reward-picture' %>
+        <%= image_tag "reward-collector.png", alt: 'reward-information', class: 'reward-picture' %>
+
+      </section>
+      <div class="informations-pass-container">
+        <section class="desktop-profile-informations">
+          <h2>Informations</h2>
+          <h3>Prénom: <%= current_user.first_name ? current_user.first_name : 'Pas renseigné' %></h3>
+          <h3>Nom: <%= current_user.last_name ? current_user.last_name : 'Pas renseigné' %></h3>
+          <h3>Ville: <%= current_user.city ? current_user.city : 'Pas renseigné' %></h3>
+          <h3>Email : <%= current_user.email %></h3>
+          <h3><%= link_to 'Modifier mon compte', edit_user_registration_path %></h3>
+
+          <%= form_for(current_user) do |f| %>
+
+            <select name="avatar_id" id="avatar_id">
+              <% @avatars.each do |avatar| %>
+                <option value=<%= avatar.id %>><%= avatar.url %></option>
+              <% end %>
+            </select>
+
+            <%= f.submit %>
+          <% end %>
+        </section>
+
+        <section class="qr-code-container">
+          <h2>Pass experience</h2>
+          <div class="profile-qr-code-container">
+            <%= image_tag "Qrcode.png", alt: 'account qr code', class: 'profile-qr-code-picture' %>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="profile-badges-container">
+      <h2>Badges</h2>
+      <div class="profile-badges-logos">
+        <div class="profile-badges-line">
+          <div class="badge-experience-amount">
+
+            <%= image_tag "champion-league-badge.png", alt: 'champion league badge', class: 'profile-badge-picture' %>
+
+            <h3>1500</h3>
+          </div>
+          <div class="badge-experience-amount">
+
+            <%= image_tag "super-fighter-league-badge.png", alt: 'super fighter badge', class: 'profile-badge-picture' %>
+
+            <h3>0</h3>
+          </div>
+        </div>
+
+        <div class="profile-badges-line">
+          <div class="badge-experience-amount">
+
+            <%= image_tag "fighter-badge.png", alt: 'account qr code', class: 'profile-badge-picture' %>
+
+            <h3>0</h3>
+          </div>
+
+          <div class="badge-experience-amount">
+            <%= image_tag "gamecenter-badge.png", alt: 'gamecenter badge', class: 'profile-gamecenter-picture' %>
+
+            <h3 class="gamecenter-score">0</h3>
+          </div>
+        </div>
+
+        <div class="profile-badges-line">
+          <div class="badge-experience-amount">
+            <%= image_tag "heroes-team-badge.png", alt: 'account qr code', class: 'profile-badge-picture' %>
+
+            <h3>0</h3>
+          </div>
+
+          <div class="badge-experience-amount">
+            <%= image_tag "gamezone-badge.png", alt: 'gamezone badge', class: 'profile-gamezone-badge' %>
+
+            <h3>0</h3>
+          </div>
+        </div>
+      </div>
+
+    </section>
 </div>
 
-<div>
-  <%= link_to 'Modifier mon compte', edit_user_registration_path %>
-</div>
 
-<div>
-  <img src=<%= @avatars.find(current_user.avatar_id).url %> alt="" style="height: 100px">
 
-</div>
 
-<div>
-  Xp : <%= current_user.xp %>
-</div>
-<br>
-<br>
-<br>
-<%= form_for(current_user) do |f| %>
 
-  <select name="avatar_id" id="avatar_id">
-    <% @avatars.each do |avatar| %>
-      <option value=<%= avatar.id %>><%= avatar.url %></option>
-    <% end %>
-  </select>
 
-  <%= f.submit %>
-<% end %>
+
+
+
+
+
+
+
+
+
+
+
