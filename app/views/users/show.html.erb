@@ -78,14 +78,17 @@
 
          <h3>Modifier mon avatar
             <%= form_for(current_user) do |f| %>
+              <div class="box">
+                <select name="avatar_id" id="avatar_id">
+                  <% count = 1 %>
+                  <% @avatars.each do |avatar| %>
+                    <option value=<%= avatar.id %> <%= current_user.avatar_id === avatar.id ? 'selected' : '' %>>L'avatar n°<%= count %></option>
+                    <% count += 1 %>
+                  <% end %>
+                </select>
+              </div>
 
-              <select name="avatar_id" id="avatar_id">
-                <% @avatars.each do |avatar| %>
-                  <option value=<%= avatar.id %>><%= avatar.id %></option>
-                <% end %>
-              </select>
-
-              <%= f.submit %>
+              <%= f.submit 'Mettre a jour', class: 'btn' %>
             <% end %>
          </h3>
         </section>

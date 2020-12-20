@@ -1,9 +1,9 @@
 <div class="container">
 		<section class="informations">
-			<h2 class="title">SE RENDRE AU PARC</h2>
+			<h2 class="title-go-to-the-park">SE RENDRE AU PARC</h2>
 			<div class="information-blablacar">
 				<div class="first-div">
-					<img src="img/cars.png" alt="">
+					<%= image_tag "cars.png" %>
 					<h3>Calculer votre intinéraire en voiture</h3>
 				</div>
 				<p>N’oubliez pas, vous pouvez également covoiturer avec notre partenaire <span>BlaBlacar</span>  !</p>
@@ -17,7 +17,7 @@
 			</div>
 			<div class="sncf">
 				<div class="first-div">
-					<img src="img/train.png" alt="">
+					<%= image_tag "train.png" %>
 					<h3>Venir en train</h3>
 				</div>
 				<p>Accès : gare du Nord Paris</p>
@@ -40,33 +40,33 @@
 	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 
-<script>
-  navigator.geolocation.getCurrentPosition(showPosition);
+	<script>
+		navigator.geolocation.getCurrentPosition(showPosition);
 
-  let longitude = 0;
-  let latitude = 0;
+		let longitude = 0;
+		let latitude = 0;
 
-  function showPosition(position) {
-    latitude = position.coords.latitude;
-    longitude =position.coords.longitude;
+		function showPosition(position) {
+			latitude = position.coords.latitude;
+			longitude =position.coords.longitude;
 
-    let carte = L.map("carte").setView([48.852969, 2.349903],13)
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',).addTo(carte)
-    L.routing.control({
-      waypoints: [
-        L.latLng(latitude, longitude ),
-        L.latLng(48.871900, 2.776623)
-    ],
-      geocoder: L.Control.Geocoder.nominatim(),
-      lineOptions: {
-        styles: [{
-          color: '#C9116A',
-          opacity: 1,
-        }]
-      },
-      router: new L.Routing.osrmv1({
-        language: 'fr'
-      })
-    }).addTo(carte)
-  } 
-</script>
+			let carte = L.map("carte").setView([48.852969, 2.349903],13)
+			L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',).addTo(carte)
+			L.routing.control({
+				waypoints: [
+					L.latLng(latitude, longitude ),
+					L.latLng(48.871900, 2.776623)
+			],
+				geocoder: L.Control.Geocoder.nominatim(),
+				lineOptions: {
+					styles: [{
+						color: '#C9116A',
+						opacity: 1,
+					}]
+				},
+				router: new L.Routing.osrmv1({
+					language: 'fr'
+				})
+			}).addTo(carte)
+		} 
+	</script>
