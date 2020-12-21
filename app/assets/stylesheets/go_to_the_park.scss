@@ -7,7 +7,7 @@ a.go {
   color: #B91466;
 }
 
-.title-go-to-the-park{
+.title-go-to-the-park {
   color: #881F6A;
   font-weight: 400;
   font-size: 31px;
@@ -32,7 +32,7 @@ a.go {
   padding: 5px 0 0 20px;
   font-size: 15px;
 }
-.informations p {
+.informations-go-to-the-park p {
   padding: 10px 40px;
   font-size: 18px;
 }
@@ -56,16 +56,16 @@ a.go {
   height: 100%;
 }
 @media screen and (min-width: 750px) and (max-width: 900px){
-  .title {
+  .title-go-to-the-park {
       margin:30px 200px;
   }
 }
 @media screen and (min-width: 901px){
-  .container {
+  .container-go-to-the-park {
       display: flex;
       flex-direction: row;
   }
-  .informations {
+  .informations-go-to-the-park {
       width: 50%;
       font-weight: 400;
   }

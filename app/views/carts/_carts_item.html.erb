@@ -5,7 +5,7 @@
 
 <% @order_items.each do |item| %>
 
-    <h3><%= Item.item.name %></h3>
+    <h3><%= item.item.name %></h3>
     <h5><%= item.item.unit_price_ht %></h5>
 
     <%= form_for item, remote: true do |f| %>

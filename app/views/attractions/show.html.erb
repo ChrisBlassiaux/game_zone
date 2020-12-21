@@ -21,5 +21,27 @@
         <%= image_tag(@attraction.pictures[1]) %>
       </div>
     </div>
+
+    <% if @attraction.video_presentation != '' %>
+      <div class="attraction-video-wrapper">
+        <div class="attraction-video-title-container">
+          <h2 class="attraction-video-title yellow-highlight">
+            PREPAREZ VOUS,<br />
+            A TRAVERS UNE VIDEO DE PRESENTATION
+          </h2>
+        </div>
+
+        <div class="youtube-video-container">
+          <iframe
+            class="attraction-youtube-video"
+            src="<%= @attraction.video_presentation %>"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+    <% end %>
   </div>
 </section>

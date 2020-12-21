@@ -1,0 +1,86 @@
+<div class="container-plan-plan">
+  <section class="selection">
+    <div class="search">
+      <div class="checkbox">
+        <div class="block-text">
+          <%= image_tag "all-attractions.png" %>
+          <p> Toutes nos attractions</p>
+        </div>
+        <input type="checkbox" name="attarctions" class="input">
+      </div>
+      <div class="checkbox">
+        <div class="block-text">
+          <%= image_tag "1m10.png" %>
+          <p>Nos attractions accessibles aux moins d'1m10</p>
+        </div>
+        <input type="checkbox" name="sup1m10" class="input">
+      </div>
+      <div class="checkbox">
+        <div class="block-text">
+          <%= image_tag "1m30.png" %>
+          <p>Nos attractions accessibles aux moins d'1m30</p>
+        </div>
+        <input type="checkbox" name="sup 1m30" class="input">
+      </div>
+      <div class="checkbox">
+        <div class="block-text">
+          <%= image_tag "point-shop.png" %>
+          <p>Tous nos magasins</p>
+        </div>
+        <input type="checkbox" name="shop" class="input">
+      </div>
+      <div class="checkbox">
+        <div class="block-text">
+          <%= image_tag "point-service.png" %>
+          <p>Tous nos services</p>
+        </div>
+        <input type="checkbox" name="services" class="input">
+      </div>
+      <div class="checkbox">
+        <div class="block-text">
+          <%= image_tag "point-restaurent.png" %>
+          <p>Tous nos restaurants</p>
+        </div>
+        <input type="checkbox" name="restaurent" class="input">
+      </div>
+      <div class="checkbox">
+        <div class="block-text">
+          <%= image_tag "point-picture.png" %>
+          <p>Tous nos points photos</p>
+        </div>
+        <input type="checkbox" name="photo" class="input">
+      </div>
+    </div>
+    <div class="park_plan">
+      <%= image_tag "plan_sansfond.png" %>
+      <div class="park_plan_childs">
+        <%= image_tag "gamezone_map_all_attractions.png", class: 'check' %>
+        <%= image_tag "gamezone_map_less_1_10.png", class: 'check' %>
+        <%= image_tag "gamezone_map_1_10_1_30.png", class: 'check' %>
+        <%= image_tag "gamezone_map_with_shops.png", class: 'check' %>
+        <%= image_tag "gamezone_map_with_services.png", class: 'check' %>
+        <%= image_tag "gamezone_map_with_restaurant.png", class: 'check' %>
+        <%= image_tag "gamezone_map_with_photography_points.png", class: 'check' %>
+      </div>
+    </div>
+  </section>
+ 
+ <script>
+    let inputs = document.querySelectorAll('.input');
+    let images = document.querySelectorAll('.check');
+
+    for(let i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener('click', event => {
+            if(images[i].style.display == 'block'){
+                images[i].style.display = 'none' ;
+            }else{
+                images[i].style.display = 'block' ;
+            }
+        })
+    }
+
+ </script>
+
+
+
+</div>

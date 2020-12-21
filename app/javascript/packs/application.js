@@ -59,20 +59,8 @@ window.onload = function () {
 
   };
 
-  // go_to_the_park
- 
 
 
-// calendar 
-
-
-
+  
 }
 
-
-
-
-
-
-
-// GAME

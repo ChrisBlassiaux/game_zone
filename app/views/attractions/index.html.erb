@@ -1,23 +1,25 @@
 <div class="page-header">
-      <h1>nous vous offrons les meilleures attractions</h1>
-      <button class="btn">Preparer ma visite</button>
-    </div>
-    <div class="widget-container">
-      <% @attractions.each do |attraction| %>
-        <div class="widget">
-          <div class="widget-content">
-            <% if attraction.pictures.attached? %>
-              <%= image_tag(attraction.pictures[0], :class => "widget-header", :style => 'width: 100px; margin-top: 20px') %>
-            <% end %>
-            <h3><%= attraction.name %></h3>
-            <h5>Gain XP : <%= attraction.experience_points %> XP / partie</h5>
-            <div><span class="subtitle"><%= attraction.conditions %></span></div>
-            <%= link_to attraction_path(attraction.id), :class => "btn" do %>
-              voir l’attraction
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
+    <h1>nous vous offrons les meilleures attractions</h1>
+    <%= link_to static_pages_go_to_the_park_path, :class => "btn" do %>
+        Preparer ma visite
+    <% end %>
   </div>
+  <div class="widget-container">
+    <% @attractions.each do |attraction| %>
+      <div class="widget">
+        <div class="widget-content">
+          <% if attraction.pictures.attached? %>
+            <%= image_tag(attraction.pictures[0], :class => "widget-header", :style => 'width: 100px; margin-top: 20px') %>
+          <% end %>
+          <h3><%= attraction.name %></h3>
+          <h5>Gain XP : <%= attraction.experience_points %> XP / partie</h5>
+          <div><span class="subtitle"><%= attraction.conditions %></span></div>
+          <%= link_to attraction_path(attraction.id), :class => "btn" do %>
+            voir l’attraction
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 

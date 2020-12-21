@@ -139,3 +139,82 @@
     font-size: 14px;
   }
 }
+
+.attraction-video-title-container {
+  background-image: image-url("lines-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+.attraction-video-title {
+  text-align: center;
+  color: #f1c01c;
+  letter-spacing: 1px;
+  font-family: "commando";
+  font-size: 20px;
+}
+
+.youtube-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .content-description {
+    padding: 80px;
+  }
+}
+
+/* Nav Desktop */
+@media screen and (min-width: 992px) {
+
+    .containe-game {
+      display: flex;
+      padding: 80px 0px 0px 80px;
+      justify-content: space-around;
+    }
+
+    .content-description {
+      max-width: 700px;
+    }
+
+    .content-description {
+      padding: 0px;
+      margin-top: 45px;
+    }
+
+    .title-game-center {
+      font-size: 25px;
+    }
+
+    .experience {
+      font-size: 18px;
+    }
+
+    .container-picture {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .container-picture > img {
+      width: 92%;
+      margin-left: 30px;
+    }
+  }
+
+  .attraction-youtube-video {
+    height: 100%;
+    width: 60%;
+  }
+
+  .youtube-video-container {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+    padding: 20px;
+  
+}
