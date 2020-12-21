@@ -1,25 +1,25 @@
+<!--
 <p id="notice"><%= notice %></p>
+-->
+<div class="container-event-news">
+  <div class="halloween-banner">
+    <h1 class="main-title"><%= @news.title %></h1>
+  </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @news.title %>
-</p>
+  <section class="event-description-wrapper">
+    <div class="event-text-description-container">
+      <div class="event-text-content">
+        <h2 class="event-subtitle"><%= @news.subtitle %></h2>
+        <p>
+          <%= @news.description %>
+        </p>
+      </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @news.subtitle %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @news.description %>
-</p>
-
-
-<p>
-  <strong>Image:</strong>
-  <% if @news.picture.attached? %>
-    <%= image_tag(@news.picture, :style => "width: 100px") %>
-  <% end %>
-</p>
-
+      <div class="event-picture-wrapper">
+          <% if @news.picture.attached? %>
+          <%= image_tag(@news.picture, :class => 'event-picture', :alt => 'zombie picture') %>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
