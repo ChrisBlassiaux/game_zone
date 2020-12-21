@@ -1,0 +1,126 @@
+
+.presse-background {
+  background-image: image-url("background-presse.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.presse-background > h1 {
+  color: #F6CD40;
+  font-size: 30px;
+}
+
+.container-presse {
+  padding: 35px;
+}
+
+.title-presse {
+  font-family: "commando";
+  letter-spacing: 1px;
+  margin-top: 70px;
+}
+
+.logo-game-presse {
+  text-align: center;
+}
+
+.logo-presse {
+  width: 50%;
+}
+
+.line-extrem-presse {
+  border: 0.5px solid black;
+  height: 50px;
+  margin: auto 3px auto 0px;
+}
+
+.line-presse {
+  border: 0.5px solid black;
+  width: 0;
+  margin-right: 10px;
+}
+
+.presse-text {
+  display: flex;
+  margin-top: 30px;
+}
+
+.presse-text > p {
+  font-family: "josefin";
+  line-height: 20px;
+  font-weight: lighter;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 30px;
+  font-family: "commando";
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+@media screen and (min-width: 768px) {
+  .presse-background {
+    height: 385px;
+    line-height: 38px;
+  }
+
+  .presse-background > h1 {
+    font-size: 50px;
+  }
+
+  .container-presse {
+    padding: 65px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container-presse {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 100px;
+  }
+
+  .logo-presse {
+    width: 60%;
+  }
+  .presse-text {
+    max-width: 900px;
+  }
+
+  .presse-text > p {
+    width: 70%;
+  }
+
+  .logo-presse {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .title-presse {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-presse {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 100px 200px 100px 200px;
+  }
+}
