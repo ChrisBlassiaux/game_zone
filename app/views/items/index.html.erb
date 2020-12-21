@@ -18,7 +18,7 @@
 
           <%= form_for @order_item, remote: true  do |f|%>
             <%= f.hidden_field :item_id, :value => item.id %>
-            <%= f.number_field :quantity, :value => 1, :min => 1, class: 'number-item-show' %>
+            <%= f.number_field :quantity, :value => 1, :min => 1, class: 'number-item-show' %> <br>
             <%= f.submit "Ajouter au panier", class: 'btn' %>
           <% end %>
         </div>

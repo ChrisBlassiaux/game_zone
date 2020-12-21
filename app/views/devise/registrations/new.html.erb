@@ -24,6 +24,13 @@
         </div>
 
         <div class="content-input">
+          <%= f.label :identifiant %><br />
+          <%= f.text_field :identifiant %>
+        </div>
+
+        <%= f.hidden_field :avatar_id, :value => Avatar.all.first.id %>
+
+        <div class="content-input">
           <%= f.label :password %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>

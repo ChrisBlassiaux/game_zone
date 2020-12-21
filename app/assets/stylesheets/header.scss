@@ -37,7 +37,7 @@ header nav .logo {
 
 .nav-avatar {
   position: absolute;
-  left: 10px;
+  left: 6px;
   top: 8px;
   width: 40px;
 }
@@ -67,7 +67,7 @@ header nav .logo {
 
 }
 
-.content-mobile {
+.content-mobile-navbar {
   position: absolute;
   display: none;
   width: 100%;
@@ -91,7 +91,7 @@ li > a:hover {
   color: #f6cd40;
 }
 
-.content-mobile > li {
+.content-mobile-navbar > li {
   margin: 20px;
   list-style: none;
 }
@@ -103,14 +103,14 @@ li > a:hover {
 
 /* Nav Desktop */
 @media screen and (min-width: 992px) {
-  .content-mobile {
+  .content-mobile-navbar {
     display: none;
   }
 }
 
 /* Nav Desktop */
 @media screen and (min-width: 1200px) {
-  .content-mobile {
+  .content-mobile-navbar {
     display: none;
   }
   header nav .link,

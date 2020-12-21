@@ -33,6 +33,11 @@
           <%= f.text_field :last_name %>
         </div>
 
+        <div class="content-input">
+          <%= f.label :city %><br />
+          <%= f.text_field :city %>
+        </div>
+
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>

@@ -13,8 +13,6 @@ class User < ApplicationRecord
                        on: :update
   validates :identifiant, presence: true
   validates :xp, presence: true
-  validates :first_name, length: {within: 2..40}
-  validates :last_name, length: {within: 2..40}
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
