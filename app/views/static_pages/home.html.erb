@@ -92,16 +92,32 @@
     </div>
   </div>
   </section>
-  <section>
-    <div class="card">
-      <div class="card-content">
-
-      </div>
-      <div class="card-content">
-        
-      </div>
-      <div class="card-content">
-        
-      </div>
-    </div>
-  </section>
+ <section>
+  <div class="container-news-title">
+    <h2 class="news-title-home">Nos actualites</h2>
+    <%= link_to news_index_path, :class => "btn" do %>
+      Toutes nos actualites
+    <% end %>
+  </div>
+  <div class="news-container-home">  
+    <% count = 0 %>
+    <% News.all.each do |news| %>
+       <% if count < 3 %>
+        <div class="news">
+          <% if news.picture.attached? %>
+            <%= image_tag(news.picture) %>
+          <% end %>
+          <h2 class="subtitle-news"><%= news.subtitle %></h2>
+          <i class="fas fa-calendar-alt">22/12/2020</i>
+          <p class="content-news">
+            <%= truncate(news.description, :length => 80) %>
+          </p>
+          <%= link_to news_path(news.id), :class => "btn" do %>
+            En savoir plus
+          <% end %>
+        </div>
+      <% end %>
+      <% count += 1 %>
+    <% end %>
+  </div>
+</section>

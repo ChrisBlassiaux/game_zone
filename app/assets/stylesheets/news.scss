@@ -16,8 +16,23 @@
   color: #f1c01c;
 }
 
+.container-news-title {
+  text-align: center;
+}
+
+.news-title-home {
+  text-align: center;
+  font-family: "commando";
+  margin-top: 40px;
+}
+
 .news-container {
   background-color: #282C53;
+  display: grid;
+  padding: 50px;
+}
+
+.news-container-home {
   display: grid;
   padding: 50px;
 }
@@ -93,7 +108,8 @@
     height: 370px;
   }
 
-  .news-container {
+  .news-container,
+  .news-container-home {
     grid-template-columns: 1fr 1fr;
     gap: 30px 10px;
   }
@@ -131,7 +147,8 @@
 }
 
 @media screen and (min-width: 992px) {
-  .news-container {
+  .news-container,
+  .news-container-home  {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 90px 20px;
   }
@@ -141,7 +158,8 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .news-container {
+  .news-container,
+  .news-container-home  {
     gap: 100px 50px;
     padding: 100px;
   }
