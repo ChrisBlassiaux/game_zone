@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     get 'static_pages/park_plan'
     get 'static_pages/my_game'
     get 'static_pages/contact'
+    get 'static_pages/presse'
     
     get 'static_pages/go_to_the_park'
     get 'static_pages/pricings'

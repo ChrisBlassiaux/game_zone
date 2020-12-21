@@ -1,0 +1,24 @@
+
+.legal-notice {
+  text-align: left;
+  margin: 40px;
+}
+
+.legal-title {
+  font-size: 18px;
+}
+
+.subtitle-legal {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .legal-notice {
+    margin: 100px;
+  }
+
+  .subtitle-legal {
+    margin-top: 50px;
+  }
+}
