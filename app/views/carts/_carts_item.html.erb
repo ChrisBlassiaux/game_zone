@@ -5,16 +5,16 @@
 
 <% @order_items.each do |item| %>
 
-    <h3><%= item.item.name %></h3>
+    <h3><%= Item.item.name %></h3>
     <h5><%= item.item.unit_price_ht %></h5>
 
     <%= form_for item, remote: true do |f| %>
 
         <%= f.hidden_field :item_id, :value => item.item.id %>
         <%= f.number_field :quantity, :value => item.quantity.to_i %>
-        <%= f.submit "Update Cart "%>
+        <%= f.submit "Mettre à jour le panier" %>
 
-        <%= link_to "Remove Items", order_item_path(item), method: :delete, remote: true%>
+        <%= link_to "Retirer du panier", order_item_path(item), method: :delete, remote: true%>
 
     <% end %>
     <h2>Subtotal: <%= item.total %></h2>

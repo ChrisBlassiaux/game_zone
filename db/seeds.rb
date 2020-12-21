@@ -15,7 +15,6 @@ News.destroy_all
 Item.destroy_all
 Avatar.destroy_all
 
-
 Avatar.create!(
   url: "https://res.cloudinary.com/gamezonestorage/image/upload/v1607901465/avatars1.png"
 )
@@ -77,7 +76,7 @@ end
   Attraction.create!(
     name: Faker::Lorem.sentence(word_count: 1),
     experience_points: [1500, 1300, 2000].sample,
-    maximum_size: [110, 130, 0].sample,
+    conditions: ['Interdit aux moins de 1m30', 'Interdit au moins de 1m10', 'Ouverte à tous'].sample,
     description: Faker::Lorem.sentence(word_count: 10),
     video_presentation: "https://www.youtube.com/watch?v=frqDT4bD-OE&feature=youtu.be",
     park_id: Park.all.first.id

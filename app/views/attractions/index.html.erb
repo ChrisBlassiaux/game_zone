@@ -11,7 +11,7 @@
             <% end %>
             <h3><%= attraction.name %></h3>
             <h5>Gain XP : <%= attraction.experience_points %> XP / partie</h5>
-            <div><span class="subtitle">INTERDIT AUX MOINS D'1M10</span></div>
+            <div><span class="subtitle"><%= attraction.conditions %></span></div>
             <%= link_to attraction_path(attraction.id), :class => "btn" do %>
               voir l’attraction
             <% end %>

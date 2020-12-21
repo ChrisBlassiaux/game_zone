@@ -77,7 +77,7 @@
             <%= image_tag(attraction.pictures[0]) if attraction.pictures.attached?  %>
             <h3 class="title">
               <span class="weight">GAIN XP : <%= attraction.experience_points %> / PARTIE</span><br>
-              INTERDIT AUX MOINS D'1M30
+              <%= attraction.conditions %>
             </h3>
             <p class="text-content">
               <%= truncate(attraction.description, length: 160) %>
