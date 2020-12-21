@@ -1,0 +1,23 @@
+
+.cgu-container {
+  margin: 40px;
+}
+
+.title-cgu {
+  font-size: 18px;
+}
+
+.subtitle-cgu {
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .cgu-container {
+    margin: 100px;
+  }
+
+  .subtitle-cgu {
+    margin-top: 50px;
+  }
+}
