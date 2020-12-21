@@ -53,7 +53,7 @@
 }
 
 .contact-page-content {
-  margin: 60px;
+  margin: 60px 60px 0 60px;
 }
 
 .contact-page-content > h2 {
@@ -73,7 +73,6 @@
   margin: 20px 0px 20px 0px;
 }
 
-.message-content > textarea,
 .email-content > input,
 .lastname-content > input,
 .firstname-content > input {
@@ -177,7 +176,7 @@
   }
   
   .contact-page-content {
-    margin: 60px 100px;
+    margin: 60px 100px 0 100px;
   }
 
   .form-content-first {

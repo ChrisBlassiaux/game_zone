@@ -107,6 +107,17 @@
   font-size: 10px;
 }
 
+.content-form input,
+.content-form textarea,
+.email-content,
+.message-content {
+  width: 100%;
+}
+
+.email-content {
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
   .page-header {
     height: 235px;
