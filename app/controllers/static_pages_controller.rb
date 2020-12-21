@@ -29,4 +29,7 @@ class StaticPagesController < ApplicationController
 
   def presse
   end
+
+  def recruitment
+  end
 end

@@ -1,0 +1,147 @@
+
+.recruitment {
+  background-image:  image-url("background-recruitment.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 270px;
+  width: 100%;
+}
+
+.recruitment-title {
+  font-size: 40px;
+  color: #f1c01c;
+}
+
+.recruitment-container {
+  display: grid;
+  padding: 50px;
+}
+
+.recruitment-content {
+  background-color: #282C53;
+  border-radius: 1px solid transparent;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: transparent;
+  text-align: left;
+  -webkit-box-shadow: 5px 7px 15px 5px rgba(0,0,0,0.82); 
+  box-shadow: 5px 7px 15px 5px rgba(0,0,0,0.82);
+  margin-right: auto;
+  padding: 40px;
+  margin-left: auto;
+}
+
+.recruitment-others-two > h2{
+  color: #F6CD40;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.recruitment-others > h2 {
+  color: #F6CD40;
+  font-size: 20px;
+  margin-bottom: 75px;
+}
+
+.recruitment-content > h2 {
+  color: #F6CD40;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.recruitment-others-two > p,
+.recruitment-others > p,
+.recruitment-content > p {
+  font-size: 16px;
+  color: #D2D2D2;
+}
+
+.btn {
+  border: none;
+  background: #F6CD40;
+  color: #71388B;
+  cursor: pointer;
+  box-shadow: -2px 2px 0px 0px #71388B;
+  padding: 8px 10px 8px 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-family: "commando";
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background: #f1c01c;
+}
+
+.recruitment-others {
+  background-color: #282C53;
+  border-radius: 1px solid transparent;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: transparent;
+  text-align: left;
+  -webkit-box-shadow: 5px 7px 15px 5px rgba(0,0,0,0.82); 
+  box-shadow: 5px 7px 15px 5px rgba(0,0,0,0.82);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+  margin-top: 30px;
+}
+
+.recruitment-others-two {
+  background-color: #282C53;
+  border-radius: 1px solid transparent;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: transparent;
+  text-align: left;
+  -webkit-box-shadow: 5px 7px 15px 5px rgba(0,0,0,0.82); 
+  box-shadow: 5px 7px 15px 5px rgba(0,0,0,0.82);
+  margin-right: auto;
+  margin-left: auto;
+  padding: 40px;
+  margin-top: 30px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .recruitment-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 10px;
+  }
+
+  .recruitment-others-two,
+  .recruitment-others {
+    margin-top: 0;
+  }
+
+  .recruitment-title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .recruitment-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 90px 20px;
+  }
+  .recruitment {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recruitment-container {
+    gap: 100px 50px;
+    padding: 100px;
+  }
+}
