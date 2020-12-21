@@ -14,19 +14,15 @@
 </section>
 
 <script>
-
-  let date = new Date()
-// let dateTest = new Date(date.getFullYear(), date.getMonth() +1, 0).getDate()
-let dateTest = new Date(2020, 2, 0).getDate()
+let date = new Date()
+let dateToday = new Date(date.getFullYear(), date.getMonth() +1, 0).getDate()
 let today = document.getElementById('today')
 let calendar = document.querySelector('#app-calendar');
 let years = document.getElementById('selectYear')
-
-console.log();
 const selectElement = document.querySelector('.ice-cream');
 
 //Pour la date du jour 
-today.insertAdjacentHTML("beforeend",`<h2> ${(date.getDate()+"/"+(date.getMonth())+"/"+date.getFullYear())}</h2>`);
+today.insertAdjacentHTML("beforeend",`<h2> ${(date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear())}</h2>`);
 
 let LastSunday = day => {
     return day % 28 === 0
@@ -45,7 +41,7 @@ let weekends = day => {
 
 
 //Je crée une boulce pour chaque jour du calendirier 
-for (let day = 1; day <= dateTest; day++) {
+for (let day = 1; day <= dateToday; day++) {
     let first =  FirstTuesday(day)
     let last = LastSunday(day)
     let nocturne = nocturnes(day)
