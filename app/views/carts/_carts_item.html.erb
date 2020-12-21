@@ -1,45 +1,67 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
+<div class="container-cart">
+  <h1>Votre panier</h1>
 
+  <table class="admin">
+    <thead>
+      <tr>
+        <th>Article</th>
+        <th>Prix unitaire</th>
+        <th>Quantité</th>
+        <th>Total </th>
+      </tr>
+    </thead>
 
+    <tbody>
+        <% @order_items.each do |item| %>
+          <tr>
+            <td><%= item.item.name %></td>
+            <td><%= item.item.unit_price_ht %> €</td>
+            <td>
+              <%= form_for item, remote: true do |f| %>
 
-<% @order_items.each do |item| %>
+                <%= f.hidden_field :item_id, :value => item.item.id %>
+                <%= f.number_field :quantity, :value => item.quantity.to_i %>
+                <%= f.submit "Mettre a jour le panier", class: 'btn' %> <br>
 
-    <h3><%= item.item.name %></h3>
-    <h5><%= item.item.unit_price_ht %></h5>
+                <%= link_to "Retirer du panier", order_item_path(item), method: :delete, remote: true%>
 
-    <%= form_for item, remote: true do |f| %>
+              <% end %>
+            </td>
+            <td>
+              <%= item.total %> €
+            </td>
+          </tr>
+        <% end %>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><%= current_order.subtotal %> €</td>
+        </tr>
+    </tbody>
+  </table>
 
-        <%= f.hidden_field :item_id, :value => item.item.id %>
-        <%= f.number_field :quantity, :value => item.quantity.to_i %>
-        <%= f.submit "Mettre à jour le panier" %>
+  <%= image_tag 'cb', style: 'width: 150px' %>
+  <h3>Votre panier actuel est de <%= current_order.subtotal %> €</h3>
 
-        <%= link_to "Retirer du panier", order_item_path(item), method: :delete, remote: true%>
-
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id='error_explanation'>
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+    </article>
+    <% if current_order.subtotal > 0%>
+      <script src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+            data-key='<%= Rails.configuration.stripe[:publishable_key] %>'
+            data-description='Payez votre commande'
+            data-email="test@test.com"
+            data-currency= 'eur',
+            data-amount=<%=  current_order.subtotal * 100 %>
+            data-label="Confirmer ma commande"
+            data-locale='auto'>
+            </script>
     <% end %>
-    <h2>Subtotal: <%= item.total %></h2>
-
-<% end %>
-
-<h3>Your current cart value has a subtotal of: <%= current_order.subtotal %></h3>
-
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id='error_explanation'>
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-  </article>
-  <% if current_order.subtotal > 0%>
-    <script src='https://checkout.stripe.com/checkout.js' class='stripe-button'
-          data-key='<%= Rails.configuration.stripe[:publishable_key] %>'
-          data-description='Payez votre commande'
-          data-email="test@test.com"
-          data-currency= 'eur',
-          data-amount=<%=  current_order.subtotal * 100 %>
-          data-label="Confirmer ma commande"
-          data-locale='auto'>
-          </script>
   <% end %>
-<% end %>
+</div>
