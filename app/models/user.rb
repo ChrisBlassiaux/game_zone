@@ -11,7 +11,7 @@ class User < ApplicationRecord
                        length: {within: 6..40},
                        allow_blank: true,
                        on: :update
-  validates :identifiant, presence: true
+  validates :identifiant, presence: true, uniqueness: true
   validates :xp, presence: true
 
   # Include default devise modules. Others available are:
