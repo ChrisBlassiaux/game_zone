@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     
     # pages dynamiques
     resources :parks, except: [:index, :show, :create, :new], path: 'gamezone'
-    resources :news, except: :index
+    resources :news
     
     resources :attractions
     resources :items
