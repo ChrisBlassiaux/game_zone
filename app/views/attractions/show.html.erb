@@ -41,7 +41,46 @@
           ></iframe>
         </div>
       </div>
-
     <% end %>
+
+    <%# comments %>
+
+    <% if user_signed_in?  %>
+   <div class="container-comments-attraction">
+      <h2 class="comments-attraction-title">Avis des participants</h2>
+
+      <div class="comments-attraction">
+        <% comments = Comment.all.where(attraction_id: @attraction.id) %>
+        <% comments.each do |comment| %>
+          <div class="contain-avatar-content">
+            <img src="<%= Avatar.find(User.find(comment.user_id).avatar_id).url %>" alt="Avatar user" class="avatar_comment-user">
+            <div class="content_comment-user">
+              <h3 class="id-comment"><%= User.find(comment.user_id).identifiant %></h3>
+              <%= comment.content %>
+              <% if current_user.id === comment.user_id %>
+                <%= link_to 'Supprimer', comment, method: :delete, :class => "delete-comment"  %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="contain-add-comment">
+        <%= form_with url: "/comments", method: :post do |form| %>
+
+            <div class="field-comment">
+              <%= form.label :content, 'Postez votre avis' %>
+              <%= form.text_area :content, class: 'textarea-comment-attraction', rows: '5' %>
+            </div>
+
+            <%= form.hidden_field :user_id, :value => current_user.id %>
+            <%= form.hidden_field :attraction_id, :value => @attraction.id %>
+
+            <div class="actions">
+            <button type="submit" value="Poster mon avis" class="btn">Poster mon avis</button>
+            </div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
   </div>
 </section>

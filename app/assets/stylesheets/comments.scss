@@ -1,0 +1,62 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container-comments-attraction {
+  width: 900px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.contain-avatar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.avatar_comment-user {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.comments-attraction {
+  width: 100%;
+}
+
+.content_comment-user {
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.id-comment {
+  margin-top: 0;
+}
+
+.comments-attraction-title {
+  font-family: 'commando';
+  letter-spacing: 0.1em;
+  color: #FFF;
+  max-width: 300px;
+  margin: 0 auto 80px auto;
+}
+
+.field-comment {
+  color: #FFF;
+}
+
+.contain-add-comment {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.textarea-comment-attraction {
+  width: 100%;
+  display: inline-block;
+  margin: 20px 0;
+  border-radius: 5px;
+  padding: 15px;
+}

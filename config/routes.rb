@@ -30,6 +30,8 @@ Rails.application.routes.draw do
     resources :attractions
     resources :items
 
+    resources :comments
+
     resources :order_items
     resource :carts, only:[:show]
 

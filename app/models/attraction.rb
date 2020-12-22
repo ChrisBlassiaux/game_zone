@@ -5,4 +5,5 @@ class Attraction < ApplicationRecord
   belongs_to :park
 
   has_many_attached :pictures
+  has_many :comments
 end
